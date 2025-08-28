@@ -1,0 +1,1213 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15632
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-772-ge7fe0f3a0e 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 18 2025 15:05:28[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fa30h (129584) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=0002fa58 vaddr=3ffb0000 size=005c0h (  1472) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9f354h (652116) map[0m
+[0;32mI (379) esp_image: segment 3: paddr=000cf37c vaddr=3ffb05c0 size=03870h ( 14448) load[0m
+[0;32mI (385) esp_image: segment 4: paddr=000d2bf4 vaddr=40080000 size=184f8h ( 99576) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     test_wifi[0m
+[0;32mI (465) cpu_start: App version:      1[0m
+[0;32mI (470) cpu_start: Compile time:     Jun 18 2025 15:03:54[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  a0273d7ed...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.5-772-ge7fe0f3a0e[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (492) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (497) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (509) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFB8360 len 00027CA0 (159 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 400984F8 len 00007B08 (30 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (562) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc03d8, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: 8fc9c18[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (783) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (823) wifi:mode : sta (00:4b:12:90:7d:d4)[0m
+[0;32mI (823) wifi:enable tsf[0m
+[0;32mI (823) wifi_simple: WiFi initialized in mode 1[0m
+[0;32mI (833) wifi_simple: STA started[0m
+[0;32mI (3243) wifi_simple: Disconnected from AP[0m
+[0;31mE (3833) bme_wifi_mqtt: Failed to connect to WiFi[0m
+[0;31mE (3833) esp-tls: couldn't get hostname for :test.mosquitto.org: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (3833) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (3843) mqtt_client: Error transport connect[0m
+[0;32mI (3843) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (3853) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (3853) bmx280: Probing for BMP280/BME280 sensors on I2C 0[0m
+[0;32mI (3853) main_task: Returned from app_main()[0m
+[0;32mI (3863) bmx280: Probe success: address=ec, id=58[0m
+[0;32mI (3883) bmx280: Reading out calibration values...[0m
+[0;32mI (3883) bmx280: Read Low Bank.[0m
+[0;32mI (3883) bmx280: Dumping calibration...[0m
+[0;32mI (3883) bmx280: 71 6c 3b 68 18 fc 06 91 c6 d6 d0 0b 15 0b 03 01 [0m
+[0;32mI (3893) bmx280: f9 ff 8c 3c f8 c6 70 17 00 00 00 00 00 00 00 00 [0m
+[0;32mI (3893) bmx280: 00 00 00 00 [0m
+[0;32mI (5663) wifi_simple: Disconnected from AP[0m
+[0;32mI (8073) wifi_simple: Disconnected from AP[0m
+[0;32mI (8243) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (8243) wifi:state: init -> auth (b0)[0m
+[0;32mI (8253) wifi:state: auth -> assoc (0)[0m
+[0;32mI (8263) wifi:state: assoc -> run (10)[0m
+[0;32mI (8303) wifi:connected with bunleab, aid = 2, channel 1, BW20, bssid = 32:e3:a4:0c:f5:b2[0m
+[0;32mI (8303) wifi:security: WPA2-PSK, phy: bgn, rssi: -34[0m
+[0;32mI (8313) wifi:pm start, type: 1[0m
+
+[0;32mI (8313) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (8323) wifi_simple: Connected to AP[0m
+[0;32mI (8343) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (13323) esp_netif_handlers: sta ip: 192.168.137.155, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (13323) wifi_simple: Got IP: 192.168.137.155[0m
+[0;32mI (23423) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (23443) test: Read Values: temperature = 30.170000, pressure = 98733.296875, humidity = -1.000000[0m
+[0;32mI (24963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (28443) test: Read Values: temperature = 30.129999, pressure = 98732.851562, humidity = -1.000000[0m
+[0;32mI (30033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (33453) test: Read Values: temperature = 30.080000, pressure = 98732.203125, humidity = -1.000000[0m
+[0;32mI (34783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (38493) test: Read Values: temperature = 30.090000, pressure = 98730.734375, humidity = -1.000000[0m
+[0;32mI (39393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (43533) test: Read Values: temperature = 30.109999, pressure = 98731.851562, humidity = -1.000000[0m
+[0;32mI (45243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (48543) test: Read Values: temperature = 30.070000, pressure = 98731.789062, humidity = -1.000000[0m
+[0;32mI (50203) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (53583) test: Read Values: temperature = 30.019999, pressure = 98729.250000, humidity = -1.000000[0m
+[0;32mI (55063) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (58623) test: Read Values: temperature = 30.019999, pressure = 98730.273438, humidity = -1.000000[0m
+[0;32mI (59973) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (63633) test: Read Values: temperature = 30.010000, pressure = 98729.023438, humidity = -1.000000[0m
+[0;32mI (65103) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (68673) test: Read Values: temperature = 30.019999, pressure = 98727.335938, humidity = -1.000000[0m
+[0;32mI (73713) test: Read Values: temperature = 29.969999, pressure = 98723.062500, humidity = -1.000000[0m
+[0;32mI (73753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (75023) wifi:<ba-add>idx:0 (ifx:0, 32:e3:a4:0c:f5:b2), tid:0, ssn:43, winSize:64[0m
+[0;32mI (76253) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (78723) test: Read Values: temperature = 29.949999, pressure = 98723.500000, humidity = -1.000000[0m
+[0;32mI (79333) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (83723) test: Read Values: temperature = 29.959999, pressure = 98721.687500, humidity = -1.000000[0m
+[0;32mI (84243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (88733) test: Read Values: temperature = 29.910000, pressure = 98717.070312, humidity = -1.000000[0m
+[0;32mI (89463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (93773) test: Read Values: temperature = 29.869999, pressure = 98715.109375, humidity = -1.000000[0m
+[0;32mI (94993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (98783) test: Read Values: temperature = 29.859999, pressure = 98712.640625, humidity = -1.000000[0m
+[0;32mI (99303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (103793) test: Read Values: temperature = 29.879999, pressure = 98713.960938, humidity = -1.000000[0m
+[0;32mI (105133) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (108793) test: Read Values: temperature = 29.889999, pressure = 98712.859375, humidity = -1.000000[0m
+[0;32mI (110663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (113803) test: Read Values: temperature = 29.889999, pressure = 98713.367188, humidity = -1.000000[0m
+[0;32mI (115633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (118843) test: Read Values: temperature = 29.879999, pressure = 98713.625000, humidity = -1.000000[0m
+[0;32mI (121723) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (123853) test: Read Values: temperature = 29.900000, pressure = 98711.203125, humidity = -1.000000[0m
+[0;32mI (125773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (128893) test: Read Values: temperature = 29.949999, pressure = 98713.929688, humidity = -1.000000[0m
+[0;32mI (130933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (133903) test: Read Values: temperature = 30.000000, pressure = 98716.445312, humidity = -1.000000[0m
+[0;32mI (134313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (138953) test: Read Values: temperature = 30.019999, pressure = 98718.109375, humidity = -1.000000[0m
+[0;32mI (139533) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (143953) test: Read Values: temperature = 29.969999, pressure = 98715.421875, humidity = -1.000000[0m
+[0;32mI (144453) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (148963) test: Read Values: temperature = 29.939999, pressure = 98713.656250, humidity = -1.000000[0m
+[0;32mI (149673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (153963) test: Read Values: temperature = 29.959999, pressure = 98714.820312, humidity = -1.000000[0m
+[0;32mI (154593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (158973) test: Read Values: temperature = 29.939999, pressure = 98713.156250, humidity = -1.000000[0m
+[0;32mI (160123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (163983) test: Read Values: temperature = 29.939999, pressure = 98713.859375, humidity = -1.000000[0m
+[0;32mI (165943) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (168983) test: Read Values: temperature = 29.900000, pressure = 98713.406250, humidity = -1.000000[0m
+[0;32mI (170863) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (173993) test: Read Values: temperature = 29.889999, pressure = 98711.609375, humidity = -1.000000[0m
+[0;32mI (176403) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (179003) test: Read Values: temperature = 29.879999, pressure = 98712.437500, humidity = -1.000000[0m
+[0;32mI (181323) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (184043) test: Read Values: temperature = 29.849998, pressure = 98712.757812, humidity = -1.000000[0m
+[0;32mI (186853) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (189053) test: Read Values: temperature = 29.900000, pressure = 98712.890625, humidity = -1.000000[0m
+[0;32mI (191143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (194063) test: Read Values: temperature = 29.900000, pressure = 98711.906250, humidity = -1.000000[0m
+[0;32mI (196243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (199063) test: Read Values: temperature = 29.889999, pressure = 98710.234375, humidity = -1.000000[0m
+[0;32mI (201283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (204073) test: Read Values: temperature = 29.889999, pressure = 98708.531250, humidity = -1.000000[0m
+[0;32mI (204673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (209083) test: Read Values: temperature = 29.900000, pressure = 98710.671875, humidity = -1.000000[0m
+[0;32mI (209573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (214083) test: Read Values: temperature = 29.920000, pressure = 98709.062500, humidity = -1.000000[0m
+[0;32mI (215473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (219093) test: Read Values: temperature = 29.929998, pressure = 98711.562500, humidity = -1.000000[0m
+[0;32mI (221623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (224103) test: Read Values: temperature = 29.939999, pressure = 98711.429688, humidity = -1.000000[0m
+[0;32mI (226173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (229143) test: Read Values: temperature = 29.980000, pressure = 98709.687500, humidity = -1.000000[0m
+[0;32mI (231393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (234153) test: Read Values: temperature = 30.010000, pressure = 98712.796875, humidity = -1.000000[0m
+[0;32mI (236003) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (239163) test: Read Values: temperature = 30.029999, pressure = 98709.687500, humidity = -1.000000[0m
+[0;32mI (240913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (244203) test: Read Values: temperature = 30.029999, pressure = 98708.109375, humidity = -1.000000[0m
+[0;32mI (245213) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (249213) test: Read Values: temperature = 30.049999, pressure = 98709.125000, humidity = -1.000000[0m
+[0;32mI (249823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (254223) test: Read Values: temperature = 30.090000, pressure = 98709.687500, humidity = -1.000000[0m
+[0;32mI (254743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (259233) test: Read Values: temperature = 30.080000, pressure = 98706.406250, humidity = -1.000000[0m
+[0;32mI (264243) test: Read Values: temperature = 30.119999, pressure = 98708.179688, humidity = -1.000000[0m
+[0;32mI (269243) test: Read Values: temperature = 30.109999, pressure = 98706.921875, humidity = -1.000000[0m
+[0;32mI (274253) test: Read Values: temperature = 30.109999, pressure = 98708.484375, humidity = -1.000000[0m
+[0;32mI (279263) test: Read Values: temperature = 30.080000, pressure = 98708.109375, humidity = -1.000000[0m
+[0;32mI (284263) test: Read Values: temperature = 30.070000, pressure = 98705.843750, humidity = -1.000000[0m
+[0;32mI (289273) test: Read Values: temperature = 30.010000, pressure = 98706.476562, humidity = -1.000000[0m
+[0;32mI (290393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (291303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (292233) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (292253) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (292273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (292833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (295403) test: Read Values: temperature = 29.949999, pressure = 98710.531250, humidity = -1.000000[0m
+[0;32mI (297743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (300403) test: Read Values: temperature = 29.879999, pressure = 98710.046875, humidity = -1.000000[0m
+[0;32mI (303273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (305413) test: Read Values: temperature = 29.820000, pressure = 98709.968750, humidity = -1.000000[0m
+[0;32mI (306653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (310453) test: Read Values: temperature = 29.779999, pressure = 98709.218750, humidity = -1.000000[0m
+[0;32mI (311013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (315493) test: Read Values: temperature = 29.760000, pressure = 98709.750000, humidity = -1.000000[0m
+[0;32mI (317713) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (320503) test: Read Values: temperature = 29.740000, pressure = 98709.109375, humidity = -1.000000[0m
+[0;32mI (322793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (325543) test: Read Values: temperature = 29.689999, pressure = 98707.585938, humidity = -1.000000[0m
+[0;32mI (326623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (330583) test: Read Values: temperature = 29.670000, pressure = 98710.640625, humidity = -1.000000[0m
+[0;32mI (330923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (335593) test: Read Values: temperature = 29.650000, pressure = 98709.187500, humidity = -1.000000[0m
+[0;32mI (336143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (340593) test: Read Values: temperature = 29.679998, pressure = 98709.539062, humidity = -1.000000[0m
+[0;32mI (342903) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (345603) test: Read Values: temperature = 29.679998, pressure = 98709.203125, humidity = -1.000000[0m
+[0;32mI (346283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (350643) test: Read Values: temperature = 29.689999, pressure = 98709.250000, humidity = -1.000000[0m
+[0;32mI (351263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (355683) test: Read Values: temperature = 29.619999, pressure = 98708.640625, humidity = -1.000000[0m
+[0;32mI (356423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (360723) test: Read Values: temperature = 29.580000, pressure = 98707.054688, humidity = -1.000000[0m
+[0;32mI (361333) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (365733) test: Read Values: temperature = 29.549999, pressure = 98706.601562, humidity = -1.000000[0m
+[0;32mI (366243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (370773) test: Read Values: temperature = 29.500000, pressure = 98704.765625, humidity = -1.000000[0m
+[0;32mI (371783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (375813) test: Read Values: temperature = 29.469999, pressure = 98705.781250, humidity = -1.000000[0m
+[0;32mI (376393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (380823) test: Read Values: temperature = 29.480000, pressure = 98705.953125, humidity = -1.000000[0m
+[0;32mI (381303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (385863) test: Read Values: temperature = 29.480000, pressure = 98707.484375, humidity = -1.000000[0m
+[0;32mI (386833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (390903) test: Read Values: temperature = 29.469999, pressure = 98708.828125, humidity = -1.000000[0m
+[0;32mI (392753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (395943) test: Read Values: temperature = 29.490000, pressure = 98708.250000, humidity = -1.000000[0m
+[0;32mI (400953) test: Read Values: temperature = 29.500000, pressure = 98709.703125, humidity = -1.000000[0m
+[0;32mI (405953) test: Read Values: temperature = 29.480000, pressure = 98708.859375, humidity = -1.000000[0m
+����������������������������������������������������������������[0;32mI (410963) test: Read Values: temperature = 29.459999, pressure = 98709.609375, humidity = -1.000000[0m
+[0;32mI (415963) test: Read Values: temperature = 29.449999, pressure = 98709.890625, humidity = -1.000000[0m
+[0;32mI (420973) test: Read Values: temperature = 29.490000, pressure = 98710.312500, humidity = -1.000000[0m
+[0;32mI (425973) test: Read Values: temperature = 29.529999, pressure = 98707.015625, humidity = -1.000000[0m
+[0;32mI (427393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (427413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (427433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (427453) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (427473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (428003) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (431773) test: Read Values: temperature = 29.590000, pressure = 98711.695312, humidity = -1.000000[0m
+[0;32mI (432913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (436773) test: Read Values: temperature = 29.660000, pressure = 98712.273438, humidity = -1.000000[0m
+[0;32mI (438443) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (441813) test: Read Values: temperature = 29.709999, pressure = 98710.937500, humidity = -1.000000[0m
+[0;32mI (446823) test: Read Values: temperature = 29.740000, pressure = 98712.515625, humidity = -1.000000[0m
+[0;32mI (450123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (450743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (451823) test: Read Values: temperature = 29.789999, pressure = 98711.164062, humidity = -1.000000[0m
+[0;32mI (456833) test: Read Values: temperature = 29.840000, pressure = 98713.367188, humidity = -1.000000[0m
+[0;32mI (456873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (458413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (461833) test: Read Values: temperature = 29.889999, pressure = 98714.164062, humidity = -1.000000[0m
+[0;32mI (463933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (466843) test: Read Values: temperature = 29.929998, pressure = 98713.937500, humidity = -1.000000[0m
+[0;32mI (470043) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (471883) test: Read Values: temperature = 29.959999, pressure = 98715.546875, humidity = -1.000000[0m
+[0;32mI (475613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (476893) test: Read Values: temperature = 29.980000, pressure = 98716.312500, humidity = -1.000000[0m
+[0;32mI (477973) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (481893) test: Read Values: temperature = 29.990000, pressure = 98713.343750, humidity = -1.000000[0m
+[0;32mI (482373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (486903) test: Read Values: temperature = 30.019999, pressure = 98713.875000, humidity = -1.000000[0m
+[0;32mI (487583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (491943) test: Read Values: temperature = 30.029999, pressure = 98715.453125, humidity = -1.000000[0m
+[0;32mI (492503) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (496953) test: Read Values: temperature = 30.029999, pressure = 98715.625000, humidity = -1.000000[0m
+[0;32mI (498343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (501993) test: Read Values: temperature = 30.049999, pressure = 98714.421875, humidity = -1.000000[0m
+[0;32mI (503883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (507003) test: Read Values: temperature = 30.019999, pressure = 98715.031250, humidity = -1.000000[0m
+[0;32mI (509093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (512043) test: Read Values: temperature = 30.000000, pressure = 98713.031250, humidity = -1.000000[0m
+[0;32mI (514313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (517053) test: Read Values: temperature = 30.000000, pressure = 98715.093750, humidity = -1.000000[0m
+[0;32mI (518333) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (522093) test: Read Values: temperature = 30.019999, pressure = 98715.070312, humidity = -1.000000[0m
+[0;32mI (522623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (527103) test: Read Values: temperature = 30.039999, pressure = 98715.578125, humidity = -1.000000[0m
+[0;32mI (532113) test: Read Values: temperature = 30.000000, pressure = 98715.093750, humidity = -1.000000[0m
+[0;32mI (537113) test: Read Values: temperature = 29.939999, pressure = 98712.328125, humidity = -1.000000[0m
+[0;32mI (541963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (542123) test: Read Values: temperature = 29.910000, pressure = 98710.406250, humidity = -1.000000[0m
+[0;32mI (547133) test: Read Values: temperature = 29.820000, pressure = 98711.875000, humidity = -1.000000[0m
+[0;32mI (549653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (549663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (549683) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (549713) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (552133) test: Read Values: temperature = 29.719999, pressure = 98711.726562, humidity = -1.000000[0m
+[0;32mI (556113) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (557173) test: Read Values: temperature = 29.689999, pressure = 98709.101562, humidity = -1.000000[0m
+[0;32mI (557643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (562183) test: Read Values: temperature = 29.639999, pressure = 98711.812500, humidity = -1.000000[0m
+[0;32mI (562643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (567223) test: Read Values: temperature = 29.580000, pressure = 98713.476562, humidity = -1.000000[0m
+[0;32mI (567773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (572233) test: Read Values: temperature = 29.580000, pressure = 98712.796875, humidity = -1.000000[0m
+[0;32mI (572993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (577233) test: Read Values: temperature = 29.580000, pressure = 98714.046875, humidity = -1.000000[0m
+[0;32mI (577913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (582243) test: Read Values: temperature = 29.590000, pressure = 98713.929688, humidity = -1.000000[0m
+[0;32mI (583443) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (587283) test: Read Values: temperature = 29.609999, pressure = 98715.765625, humidity = -1.000000[0m
+[0;32mI (587743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (592293) test: Read Values: temperature = 29.639999, pressure = 98717.460938, humidity = -1.000000[0m
+[0;32mI (592663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (597333) test: Read Values: temperature = 29.629999, pressure = 98718.070312, humidity = -1.000000[0m
+[0;32mI (598493) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (602373) test: Read Values: temperature = 29.639999, pressure = 98717.968750, humidity = -1.000000[0m
+[0;32mI (606173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (607383) test: Read Values: temperature = 29.559999, pressure = 98715.218750, humidity = -1.000000[0m
+[0;32mI (608023) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (612423) test: Read Values: temperature = 29.519999, pressure = 98714.937500, humidity = -1.000000[0m
+[0;32mI (612923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (617463) test: Read Values: temperature = 29.510000, pressure = 98717.296875, humidity = -1.000000[0m
+[0;32mI (618153) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (622473) test: Read Values: temperature = 29.490000, pressure = 98719.578125, humidity = -1.000000[0m
+[0;32mI (623063) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (627513) test: Read Values: temperature = 29.500000, pressure = 98717.734375, humidity = -1.000000[0m
+[0;32mI (628283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (632553) test: Read Values: temperature = 29.549999, pressure = 98717.242188, humidity = -1.000000[0m
+[0;32mI (634123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (637563) test: Read Values: temperature = 29.599998, pressure = 98719.453125, humidity = -1.000000[0m
+[0;32mI (638733) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (642603) test: Read Values: temperature = 29.660000, pressure = 98720.843750, humidity = -1.000000[0m
+[0;32mI (645183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (647613) test: Read Values: temperature = 29.679998, pressure = 98721.484375, humidity = -1.000000[0m
+[0;32mI (649183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (652653) test: Read Values: temperature = 29.670000, pressure = 98721.117188, humidity = -1.000000[0m
+[0;32mI (653183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (657663) test: Read Values: temperature = 29.709999, pressure = 98722.726562, humidity = -1.000000[0m
+[0;32mI (658083) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (662703) test: Read Values: temperature = 29.760000, pressure = 98720.359375, humidity = -1.000000[0m
+[0;32mI (663313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (667713) test: Read Values: temperature = 29.799999, pressure = 98721.812500, humidity = -1.000000[0m
+[0;32mI (668223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (672723) test: Read Values: temperature = 29.789999, pressure = 98722.945312, humidity = -1.000000[0m
+[0;32mI (673133) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (677763) test: Read Values: temperature = 29.820000, pressure = 98721.921875, humidity = -1.000000[0m
+[0;32mI (678363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (682773) test: Read Values: temperature = 29.869999, pressure = 98723.781250, humidity = -1.000000[0m
+[0;32mI (683273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (687813) test: Read Values: temperature = 29.910000, pressure = 98723.335938, humidity = -1.000000[0m
+[0;32mI (688193) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (692823) test: Read Values: temperature = 29.920000, pressure = 98724.265625, humidity = -1.000000[0m
+[0;32mI (693413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (697833) test: Read Values: temperature = 29.889999, pressure = 98724.468750, humidity = -1.000000[0m
+[0;32mI (700173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (702833) test: Read Values: temperature = 29.889999, pressure = 98724.414062, humidity = -1.000000[0m
+[0;32mI (703553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (707843) test: Read Values: temperature = 29.910000, pressure = 98722.687500, humidity = -1.000000[0m
+[0;32mI (708473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (712853) test: Read Values: temperature = 29.920000, pressure = 98725.968750, humidity = -1.000000[0m
+[0;32mI (713383) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (717853) test: Read Values: temperature = 29.920000, pressure = 98726.710938, humidity = -1.000000[0m
+[0;32mI (718303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (722863) test: Read Values: temperature = 29.910000, pressure = 98724.226562, humidity = -1.000000[0m
+[0;32mI (723513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (727873) test: Read Values: temperature = 29.920000, pressure = 98725.500000, humidity = -1.000000[0m
+[0;32mI (729623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (732883) test: Read Values: temperature = 29.949999, pressure = 98726.718750, humidity = -1.000000[0m
+[0;32mI (733653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (737893) test: Read Values: temperature = 29.949999, pressure = 98726.875000, humidity = -1.000000[0m
+[0;32mI (738573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (742893) test: Read Values: temperature = 29.969999, pressure = 98725.984375, humidity = -1.000000[0m
+[0;32mI (743483) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (747903) test: Read Values: temperature = 30.010000, pressure = 98727.601562, humidity = -1.000000[0m
+[0;32mI (749613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (752943) test: Read Values: temperature = 30.000000, pressure = 98725.359375, humidity = -1.000000[0m
+[0;32mI (753933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (757953) test: Read Values: temperature = 30.010000, pressure = 98728.171875, humidity = -1.000000[0m
+[0;32mI (758603) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (762953) test: Read Values: temperature = 30.029999, pressure = 98726.742188, humidity = -1.000000[0m
+[0;32mI (763763) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (767963) test: Read Values: temperature = 30.059999, pressure = 98728.164062, humidity = -1.000000[0m
+[0;32mI (770823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (772973) test: Read Values: temperature = 30.099998, pressure = 98730.781250, humidity = -1.000000[0m
+[0;32mI (773593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (778013) test: Read Values: temperature = 30.139999, pressure = 98731.203125, humidity = -1.000000[0m
+[0;32mI (779123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (783023) test: Read Values: temperature = 30.139999, pressure = 98732.406250, humidity = -1.000000[0m
+[0;32mI (783733) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (788033) test: Read Values: temperature = 30.139999, pressure = 98731.734375, humidity = -1.000000[0m
+[0;32mI (793043) test: Read Values: temperature = 30.160000, pressure = 98730.859375, humidity = -1.000000[0m
+[0;32mI (794793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (797263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (798053) test: Read Values: temperature = 30.160000, pressure = 98730.156250, humidity = -1.000000[0m
+[0;32mI (799393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (803053) test: Read Values: temperature = 30.160000, pressure = 98731.156250, humidity = -1.000000[0m
+[0;32mI (804313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (808063) test: Read Values: temperature = 30.160000, pressure = 98733.437500, humidity = -1.000000[0m
+[0;32mI (809223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (813073) test: Read Values: temperature = 30.129999, pressure = 98730.679688, humidity = -1.000000[0m
+[0;32mI (813523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (818113) test: Read Values: temperature = 30.109999, pressure = 98732.414062, humidity = -1.000000[0m
+[0;32mI (818813) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (823123) test: Read Values: temperature = 30.090000, pressure = 98732.234375, humidity = -1.000000[0m
+[0;32mI (824283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (828133) test: Read Values: temperature = 30.080000, pressure = 98732.367188, humidity = -1.000000[0m
+[0;32mI (828583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (833173) test: Read Values: temperature = 30.090000, pressure = 98733.093750, humidity = -1.000000[0m
+[0;32mI (833803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (838183) test: Read Values: temperature = 30.109999, pressure = 98733.765625, humidity = -1.000000[0m
+[0;32mI (838723) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (843193) test: Read Values: temperature = 30.109999, pressure = 98731.671875, humidity = -1.000000[0m
+[0;32mI (843633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (848203) test: Read Values: temperature = 30.090000, pressure = 98732.937500, humidity = -1.000000[0m
+[0;32mI (849473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (853203) test: Read Values: temperature = 30.070000, pressure = 98729.929688, humidity = -1.000000[0m
+[0;32mI (853773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (858213) test: Read Values: temperature = 30.059999, pressure = 98732.062500, humidity = -1.000000[0m
+[0;32mI (858703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (863223) test: Read Values: temperature = 30.049999, pressure = 98732.023438, humidity = -1.000000[0m
+[0;32mI (864223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (868233) test: Read Values: temperature = 30.049999, pressure = 98730.468750, humidity = -1.000000[0m
+[0;32mI (868823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (873233) test: Read Values: temperature = 30.080000, pressure = 98733.726562, humidity = -1.000000[0m
+[0;32mI (874043) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (878243) test: Read Values: temperature = 30.080000, pressure = 98733.218750, humidity = -1.000000[0m
+[0;32mI (878963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (883253) test: Read Values: temperature = 30.080000, pressure = 98734.093750, humidity = -1.000000[0m
+[0;32mI (883873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (888263) test: Read Values: temperature = 30.080000, pressure = 98734.406250, humidity = -1.000000[0m
+[0;32mI (888793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (893273) test: Read Values: temperature = 30.059999, pressure = 98734.828125, humidity = -1.000000[0m
+[0;32mI (893703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (898273) test: Read Values: temperature = 30.049999, pressure = 98734.734375, humidity = -1.000000[0m
+[0;32mI (898933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (903283) test: Read Values: temperature = 30.039999, pressure = 98733.000000, humidity = -1.000000[0m
+[0;32mI (903843) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (908293) test: Read Values: temperature = 30.029999, pressure = 98735.828125, humidity = -1.000000[0m
+[0;32mI (908763) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (913303) test: Read Values: temperature = 30.019999, pressure = 98733.539062, humidity = -1.000000[0m
+[0;32mI (913673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (918303) test: Read Values: temperature = 30.029999, pressure = 98732.875000, humidity = -1.000000[0m
+[0;32mI (919823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (923313) test: Read Values: temperature = 30.019999, pressure = 98736.609375, humidity = -1.000000[0m
+[0;32mI (926273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (928323) test: Read Values: temperature = 30.010000, pressure = 98732.570312, humidity = -1.000000[0m
+[0;32mI (929033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (933363) test: Read Values: temperature = 30.010000, pressure = 98735.515625, humidity = -1.000000[0m
+[0;32mI (933953) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (938373) test: Read Values: temperature = 30.010000, pressure = 98733.421875, humidity = -1.000000[0m
+[0;32mI (938873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (943383) test: Read Values: temperature = 29.990000, pressure = 98733.343750, humidity = -1.000000[0m
+[0;32mI (948383) test: Read Values: temperature = 30.000000, pressure = 98734.414062, humidity = -1.000000[0m
+[0;32mI (949623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (950243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (953393) test: Read Values: temperature = 30.019999, pressure = 98734.546875, humidity = -1.000000[0m
+[0;32mI (954223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (958403) test: Read Values: temperature = 30.010000, pressure = 98733.789062, humidity = -1.000000[0m
+[0;32mI (958833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (963413) test: Read Values: temperature = 30.000000, pressure = 98733.015625, humidity = -1.000000[0m
+[0;32mI (964053) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (968453) test: Read Values: temperature = 30.000000, pressure = 98733.218750, humidity = -1.000000[0m
+[0;32mI (968973) MQTT: MQTT_EVENT_PUBLISHED[0m
+����������������������������������������������������������������[0;32mI (973463) test: Read Values: temperature = 29.990000, pressure = 98733.820312, humidity = -1.000000[0m
+[0;32mI (973883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (978473) test: Read Values: temperature = 29.969999, pressure = 98732.484375, humidity = -1.000000[0m
+[0;32mI (979113) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (983483) test: Read Values: temperature = 29.969999, pressure = 98730.281250, humidity = -1.000000[0m
+[0;32mI (984023) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (988523) test: Read Values: temperature = 29.980000, pressure = 98731.390625, humidity = -1.000000[0m
+[0;32mI (988943) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (993573) test: Read Values: temperature = 30.010000, pressure = 98730.218750, humidity = -1.000000[0m
+[0;32mI (994163) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (998573) test: Read Values: temperature = 30.039999, pressure = 98731.257812, humidity = -1.000000[0m
+[0;32mI (999073) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1003583) test: Read Values: temperature = 30.049999, pressure = 98731.500000, humidity = -1.000000[0m
+[0;32mI (1003993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1008593) test: Read Values: temperature = 30.080000, pressure = 98731.687500, humidity = -1.000000[0m
+[0;32mI (1011673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1013633) test: Read Values: temperature = 30.080000, pressure = 98731.531250, humidity = -1.000000[0m
+[0;32mI (1014143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1018643) test: Read Values: temperature = 30.109999, pressure = 98731.734375, humidity = -1.000000[0m
+[0;32mI (1023653) test: Read Values: temperature = 30.150000, pressure = 98728.359375, humidity = -1.000000[0m
+[0;32mI (1028663) test: Read Values: temperature = 30.170000, pressure = 98728.851562, humidity = -1.000000[0m
+[0;32mI (1033483) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1033663) test: Read Values: temperature = 30.189999, pressure = 98728.296875, humidity = -1.000000[0m
+[0;32mI (1035643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1035663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1035703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1038673) test: Read Values: temperature = 30.219999, pressure = 98726.992188, humidity = -1.000000[0m
+[0;32mI (1039013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1043683) test: Read Values: temperature = 30.230000, pressure = 98725.976562, humidity = -1.000000[0m
+[0;32mI (1044543) MQTT: MQTT_EVENT_PUBLISHED[0m
+����������������������������������������������������������������[0;32mI (1048693) test: Read Values: temperature = 30.240000, pressure = 98724.875000, humidity = -1.000000[0m
+[0;32mI (1049163) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1053703) test: Read Values: temperature = 30.230000, pressure = 98727.515625, humidity = -1.000000[0m
+[0;32mI (1054373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1058713) test: Read Values: temperature = 30.199999, pressure = 98723.601562, humidity = -1.000000[0m
+[0;32mI (1059283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1063713) test: Read Values: temperature = 30.179998, pressure = 98724.500000, humidity = -1.000000[0m
+[0;32mI (1064203) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1068723) test: Read Values: temperature = 30.160000, pressure = 98725.710938, humidity = -1.000000[0m
+[0;32mI (1069423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1073733) test: Read Values: temperature = 30.160000, pressure = 98723.171875, humidity = -1.000000[0m
+[0;32mI (1074353) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1078743) test: Read Values: temperature = 30.170000, pressure = 98724.062500, humidity = -1.000000[0m
+[0;32mI (1079263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1083743) test: Read Values: temperature = 30.139999, pressure = 98722.531250, humidity = -1.000000[0m
+[0;32mI (1084483) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1088753) test: Read Values: temperature = 30.109999, pressure = 98721.656250, humidity = -1.000000[0m
+[0;32mI (1089393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1093793) test: Read Values: temperature = 30.090000, pressure = 98719.968750, humidity = -1.000000[0m
+[0;32mI (1094313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1098803) test: Read Values: temperature = 30.090000, pressure = 98720.281250, humidity = -1.000000[0m
+[0;32mI (1099543) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1103843) test: Read Values: temperature = 30.080000, pressure = 98721.273438, humidity = -1.000000[0m
+[0;32mI (1105063) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1108853) test: Read Values: temperature = 30.049999, pressure = 98721.078125, humidity = -1.000000[0m
+[0;32mI (1109363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1113863) test: Read Values: temperature = 30.019999, pressure = 98719.515625, humidity = -1.000000[0m
+[0;32mI (1114273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1118903) test: Read Values: temperature = 30.019999, pressure = 98719.343750, humidity = -1.000000[0m
+[0;32mI (1119503) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1123913) test: Read Values: temperature = 30.000000, pressure = 98719.156250, humidity = -1.000000[0m
+[0;32mI (1124723) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1128953) test: Read Values: temperature = 30.010000, pressure = 98716.703125, humidity = -1.000000[0m
+[0;32mI (1129633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1133963) test: Read Values: temperature = 30.019999, pressure = 98717.640625, humidity = -1.000000[0m
+[0;32mI (1134553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1139003) test: Read Values: temperature = 30.029999, pressure = 98717.554688, humidity = -1.000000[0m
+[0;32mI (1139463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1144013) test: Read Values: temperature = 30.039999, pressure = 98715.750000, humidity = -1.000000[0m
+[0;32mI (1144693) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1149023) test: Read Values: temperature = 30.049999, pressure = 98716.976562, humidity = -1.000000[0m
+[0;32mI (1149603) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1154033) test: Read Values: temperature = 30.080000, pressure = 98714.750000, humidity = -1.000000[0m
+[0;32mI (1154523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1159033) test: Read Values: temperature = 30.109999, pressure = 98715.960938, humidity = -1.000000[0m
+[0;32mI (1159743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1164043) test: Read Values: temperature = 30.129999, pressure = 98715.453125, humidity = -1.000000[0m
+[0;32mI (1164653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1169053) test: Read Values: temperature = 30.109999, pressure = 98713.796875, humidity = -1.000000[0m
+����������������������������������������������������������������0;32mI (1174063) test: Read Values: temperature = 30.139999, pressure = 98714.656250, humidity = -1.000000[0m
+[0;32mI (1176023) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1176643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1179073) test: Read Values: temperature = 30.150000, pressure = 98711.820312, humidity = -1.000000[0m
+[0;32mI (1179713) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1184113) test: Read Values: temperature = 30.119999, pressure = 98709.062500, humidity = -1.000000[0m
+[0;32mI (1184623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1189123) test: Read Values: temperature = 30.080000, pressure = 98709.843750, humidity = -1.000000[0m
+[0;32mI (1189843) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1194133) test: Read Values: temperature = 30.059999, pressure = 98711.562500, humidity = -1.000000[0m
+[0;32mI (1194763) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1199143) test: Read Values: temperature = 30.029999, pressure = 98709.304688, humidity = -1.000000[0m
+[0;32mI (1199673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1204143) test: Read Values: temperature = 30.000000, pressure = 98707.429688, humidity = -1.000000[0m
+[0;32mI (1204593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1209153) test: Read Values: temperature = 29.929998, pressure = 98706.656250, humidity = -1.000000[0m
+[0;32mI (1209513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1214163) test: Read Values: temperature = 29.869999, pressure = 98703.984375, humidity = -1.000000[0m
+[0;32mI (1214733) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1219163) test: Read Values: temperature = 29.859999, pressure = 98702.414062, humidity = -1.000000[0m
+[0;32mI (1219653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1224173) test: Read Values: temperature = 29.869999, pressure = 98701.101562, humidity = -1.000000[0m
+[0;32mI (1224873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1229183) test: Read Values: temperature = 29.889999, pressure = 98702.890625, humidity = -1.000000[0m
+[0;32mI (1229783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1234183) test: Read Values: temperature = 29.879999, pressure = 98702.171875, humidity = -1.000000[0m
+[0;32mI (1234703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1239193) test: Read Values: temperature = 29.879999, pressure = 98699.093750, humidity = -1.000000[0m
+[0;32mI (1239613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1244203) test: Read Values: temperature = 29.900000, pressure = 98698.750000, humidity = -1.000000[0m
+[0;32mI (1244533) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1249203) test: Read Values: temperature = 29.910000, pressure = 98699.953125, humidity = -1.000000[0m
+[0;32mI (1249753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1254213) test: Read Values: temperature = 29.920000, pressure = 98697.453125, humidity = -1.000000[0m
+[0;32mI (1254683) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1259253) test: Read Values: temperature = 29.910000, pressure = 98697.562500, humidity = -1.000000[0m
+[0;32mI (1259583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1264263) test: Read Values: temperature = 29.889999, pressure = 98698.132812, humidity = -1.000000[0m
+[0;32mI (1264803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1269303) test: Read Values: temperature = 29.859999, pressure = 98695.375000, humidity = -1.000000[0m
+[0;32mI (1269723) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1274313) test: Read Values: temperature = 29.859999, pressure = 98697.250000, humidity = -1.000000[0m
+[0;32mI (1274633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1279353) test: Read Values: temperature = 29.849998, pressure = 98697.375000, humidity = -1.000000[0m
+[0;32mI (1279873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1284363) test: Read Values: temperature = 29.859999, pressure = 98696.914062, humidity = -1.000000[0m
+[0;32mI (1286613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1289403) test: Read Values: temperature = 29.869999, pressure = 98695.296875, humidity = -1.000000[0m
+[0;32mI (1289993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1294413) test: Read Values: temperature = 29.869999, pressure = 98692.546875, humidity = -1.000000[0m
+[0;32mI (1294913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1299453) test: Read Values: temperature = 29.859999, pressure = 98691.093750, humidity = -1.000000[0m
+[0;32mI (1299823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1304463) test: Read Values: temperature = 29.859999, pressure = 98688.734375, humidity = -1.000000[0m
+[0;32mI (1305043) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1309473) test: Read Values: temperature = 29.889999, pressure = 98689.578125, humidity = -1.000000[0m
+[0;32mI (1309963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1314513) test: Read Values: temperature = 29.889999, pressure = 98691.296875, humidity = -1.000000[0m
+[0;32mI (1314883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1319523) test: Read Values: temperature = 29.920000, pressure = 98691.328125, humidity = -1.000000[0m
+[0;32mI (1320103) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1324533) test: Read Values: temperature = 29.929998, pressure = 98691.281250, humidity = -1.000000[0m
+[0;32mI (1325013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1329573) test: Read Values: temperature = 29.920000, pressure = 98690.671875, humidity = -1.000000[0m
+[0;32mI (1329933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1334583) test: Read Values: temperature = 29.910000, pressure = 98688.171875, humidity = -1.000000[0m
+[0;32mI (1335153) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1339623) test: Read Values: temperature = 29.900000, pressure = 98685.734375, humidity = -1.000000[0m
+[0;32mI (1340073) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1344633) test: Read Values: temperature = 29.889999, pressure = 98684.468750, humidity = -1.000000[0m
+[0;32mI (1344983) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1349633) test: Read Values: temperature = 29.889999, pressure = 98684.656250, humidity = -1.000000[0m
+[0;32mI (1350203) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1354643) test: Read Values: temperature = 29.879999, pressure = 98681.500000, humidity = -1.000000[0m
+[0;32mI (1355123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1359683) test: Read Values: temperature = 29.869999, pressure = 98681.085938, humidity = -1.000000[0m
+[0;32mI (1360343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1364693) test: Read Values: temperature = 29.869999, pressure = 98683.359375, humidity = -1.000000[0m
+[0;32mI (1365263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1369733) test: Read Values: temperature = 29.849998, pressure = 98685.406250, humidity = -1.000000[0m
+[0;32mI (1370173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1374743) test: Read Values: temperature = 29.789999, pressure = 98685.046875, humidity = -1.000000[0m
+[0;32mI (1375393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1379783) test: Read Values: temperature = 29.809999, pressure = 98684.984375, humidity = -1.000000[0m
+[0;32mI (1380313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1384793) test: Read Values: temperature = 29.820000, pressure = 98679.062500, humidity = -1.000000[0m
+[0;32mI (1385223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1389793) test: Read Values: temperature = 29.820000, pressure = 98678.539062, humidity = -1.000000[0m
+[0;32mI (1390143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1394803) test: Read Values: temperature = 29.820000, pressure = 98681.968750, humidity = -1.000000[0m
+[0;32mI (1395373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1399843) test: Read Values: temperature = 29.779999, pressure = 98680.367188, humidity = -1.000000[0m
+[0;32mI (1400283) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1404883) test: Read Values: temperature = 29.769999, pressure = 98680.765625, humidity = -1.000000[0m
+[0;32mI (1405503) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1409893) test: Read Values: temperature = 29.769999, pressure = 98680.312500, humidity = -1.000000[0m
+[0;32mI (1410423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1414933) test: Read Values: temperature = 29.760000, pressure = 98682.296875, humidity = -1.000000[0m
+[0;32mI (1417183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1419943) test: Read Values: temperature = 29.789999, pressure = 98680.085938, humidity = -1.000000[0m
+[0;32mI (1420553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1424953) test: Read Values: temperature = 29.799999, pressure = 98681.984375, humidity = -1.000000[0m
+[0;32mI (1425473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1429953) test: Read Values: temperature = 29.799999, pressure = 98680.812500, humidity = -1.000000[0m
+[0;32mI (1430693) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1434963) test: Read Values: temperature = 29.809999, pressure = 98679.703125, humidity = -1.000000[0m
+[0;32mI (1435303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1439973) test: Read Values: temperature = 29.820000, pressure = 98680.453125, humidity = -1.000000[0m
+[0;32mI (1440523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1444973) test: Read Values: temperature = 29.830000, pressure = 98681.359375, humidity = -1.000000[0m
+[0;32mI (1445443) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1449983) test: Read Values: temperature = 29.840000, pressure = 98680.375000, humidity = -1.000000[0m
+[0;32mI (1450353) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1454993) test: Read Values: temperature = 29.849998, pressure = 98678.062500, humidity = -1.000000[0m
+[0;32mI (1455583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1460033) test: Read Values: temperature = 29.820000, pressure = 98676.328125, humidity = -1.000000[0m
+[0;32mI (1460493) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1465043) test: Read Values: temperature = 29.789999, pressure = 98679.750000, humidity = -1.000000[0m
+[0;32mI (1465403) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1470083) test: Read Values: temperature = 29.779999, pressure = 98677.109375, humidity = -1.000000[0m
+[0;32mI (1470633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1475093) test: Read Values: temperature = 29.799999, pressure = 98678.117188, humidity = -1.000000[0m
+[0;32mI (1475543) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1480133) test: Read Values: temperature = 29.789999, pressure = 98678.710938, humidity = -1.000000[0m
+[0;32mI (1480463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1485143) test: Read Values: temperature = 29.779999, pressure = 98675.734375, humidity = -1.000000[0m
+[0;32mI (1485683) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1490183) test: Read Values: temperature = 29.769999, pressure = 98673.976562, humidity = -1.000000[0m
+[0;32mI (1490603) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1495193) test: Read Values: temperature = 29.789999, pressure = 98675.968750, humidity = -1.000000[0m
+[0;32mI (1495513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1500233) test: Read Values: temperature = 29.799999, pressure = 98677.601562, humidity = -1.000000[0m
+[0;32mI (1500733) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1505243) test: Read Values: temperature = 29.760000, pressure = 98679.210938, humidity = -1.000000[0m
+[0;32mI (1510283) test: Read Values: temperature = 29.750000, pressure = 98679.125000, humidity = -1.000000[0m
+[0;32mI (1515293) test: Read Values: temperature = 29.740000, pressure = 98677.171875, humidity = -1.000000[0m
+[0;32mI (1519783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1520303) test: Read Values: temperature = 29.740000, pressure = 98676.984375, humidity = -1.000000[0m
+[0;32mI (1520703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1520723) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1521013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1525343) test: Read Values: temperature = 29.769999, pressure = 98677.062500, humidity = -1.000000[0m
+[0;32mI (1525923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1530383) test: Read Values: temperature = 29.769999, pressure = 98679.453125, humidity = -1.000000[0m
+[0;32mI (1530853) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1535393) test: Read Values: temperature = 29.789999, pressure = 98680.750000, humidity = -1.000000[0m
+[0;32mI (1535753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1540433) test: Read Values: temperature = 29.789999, pressure = 98680.062500, humidity = -1.000000[0m
+[0;32mI (1540983) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1545443) test: Read Values: temperature = 29.789999, pressure = 98676.140625, humidity = -1.000000[0m
+[0;32mI (1545893) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1550453) test: Read Values: temperature = 29.779999, pressure = 98676.593750, humidity = -1.000000[0m
+[0;32mI (1550813) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1555493) test: Read Values: temperature = 29.769999, pressure = 98676.218750, humidity = -1.000000[0m
+[0;32mI (1556033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1560503) test: Read Values: temperature = 29.799999, pressure = 98674.640625, humidity = -1.000000[0m
+[0;32mI (1560833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1565513) test: Read Values: temperature = 29.830000, pressure = 98672.828125, humidity = -1.000000[0m
+[0;32mI (1565863) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1570513) test: Read Values: temperature = 29.879999, pressure = 98673.671875, humidity = -1.000000[0m
+[0;32mI (1571083) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1575523) test: Read Values: temperature = 29.869999, pressure = 98672.250000, humidity = -1.000000[0m
+[0;32mI (1576003) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1580533) test: Read Values: temperature = 29.859999, pressure = 98671.828125, humidity = -1.000000[0m
+[0;32mI (1580913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1585533) test: Read Values: temperature = 29.830000, pressure = 98672.273438, humidity = -1.000000[0m
+[0;32mI (1586133) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1590543) test: Read Values: temperature = 29.830000, pressure = 98674.664062, humidity = -1.000000[0m
+[0;32mI (1591053) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1595553) test: Read Values: temperature = 29.820000, pressure = 98673.609375, humidity = -1.000000[0m
+[0;32mI (1596273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1600553) test: Read Values: temperature = 29.820000, pressure = 98676.156250, humidity = -1.000000[0m
+[0;32mI (1601193) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1605563) test: Read Values: temperature = 29.799999, pressure = 98677.031250, humidity = -1.000000[0m
+[0;32mI (1606103) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1610573) test: Read Values: temperature = 29.779999, pressure = 98674.234375, humidity = -1.000000[0m
+[0;32mI (1611023) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1615573) test: Read Values: temperature = 29.769999, pressure = 98674.625000, humidity = -1.000000[0m
+[0;32mI (1616243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1620583) test: Read Values: temperature = 29.760000, pressure = 98676.140625, humidity = -1.000000[0m
+[0;32mI (1621163) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1625593) test: Read Values: temperature = 29.750000, pressure = 98671.765625, humidity = -1.000000[0m
+[0;32mI (1626073) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1630593) test: Read Values: temperature = 29.730000, pressure = 98671.125000, humidity = -1.000000[0m
+[0;32mI (1630983) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1635603) test: Read Values: temperature = 29.689999, pressure = 98672.437500, humidity = -1.000000[0m
+[0;32mI (1636213) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1640643) test: Read Values: temperature = 29.639999, pressure = 98672.906250, humidity = -1.000000[0m
+[0;32mI (1641123) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1645653) test: Read Values: temperature = 29.639999, pressure = 98674.421875, humidity = -1.000000[0m
+[0;32mI (1646353) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1650693) test: Read Values: temperature = 29.519999, pressure = 98662.429688, humidity = -1.000000[0m
+[0;32mI (1651263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1655703) test: Read Values: temperature = 29.459999, pressure = 98669.007812, humidity = -1.000000[0m
+[0;32mI (1656183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1660743) test: Read Values: temperature = 29.439999, pressure = 98672.750000, humidity = -1.000000[0m
+[0;32mI (1661093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1665783) test: Read Values: temperature = 29.420000, pressure = 98669.250000, humidity = -1.000000[0m
+[0;32mI (1666313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1670823) test: Read Values: temperature = 29.410000, pressure = 98667.640625, humidity = -1.000000[0m
+[0;32mI (1673383) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1675833) test: Read Values: temperature = 29.439999, pressure = 98673.093750, humidity = -1.000000[0m
+[0;32mI (1676143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1680873) test: Read Values: temperature = 29.469999, pressure = 98672.093750, humidity = -1.000000[0m
+[0;32mI (1681373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1685913) test: Read Values: temperature = 29.480000, pressure = 98671.687500, humidity = -1.000000[0m
+[0;32mI (1686593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1690923) test: Read Values: temperature = 29.500000, pressure = 98670.281250, humidity = -1.000000[0m
+[0;32mI (1691503) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1695963) test: Read Values: temperature = 29.459999, pressure = 98670.359375, humidity = -1.000000[0m
+[0;32mI (1696423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1701003) test: Read Values: temperature = 29.439999, pressure = 98669.546875, humidity = -1.000000[0m
+[0;32mI (1701343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1706013) test: Read Values: temperature = 29.420000, pressure = 98670.250000, humidity = -1.000000[0m
+[0;32mI (1706563) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1711013) test: Read Values: temperature = 29.449999, pressure = 98674.015625, humidity = -1.000000[0m
+[0;32mI (1711473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1716023) test: Read Values: temperature = 29.439999, pressure = 98672.296875, humidity = -1.000000[0m
+[0;32mI (1716393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1721063) test: Read Values: temperature = 29.469999, pressure = 98670.218750, humidity = -1.000000[0m
+[0;32mI (1721623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1726073) test: Read Values: temperature = 29.490000, pressure = 98670.343750, humidity = -1.000000[0m
+[0;32mI (1726523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1731073) test: Read Values: temperature = 29.500000, pressure = 98670.953125, humidity = -1.000000[0m
+[0;32mI (1731443) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1736083) test: Read Values: temperature = 29.529999, pressure = 98669.281250, humidity = -1.000000[0m
+[0;32mI (1736663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1741123) test: Read Values: temperature = 29.559999, pressure = 98668.632812, humidity = -1.000000[0m
+[0;32mI (1741583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1746133) test: Read Values: temperature = 29.599998, pressure = 98671.484375, humidity = -1.000000[0m
+[0;32mI (1746803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1751173) test: Read Values: temperature = 29.650000, pressure = 98671.421875, humidity = -1.000000[0m
+[0;32mI (1751713) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1756183) test: Read Values: temperature = 29.679998, pressure = 98672.328125, humidity = -1.000000[0m
+[0;32mI (1756633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1761183) test: Read Values: temperature = 29.709999, pressure = 98671.500000, humidity = -1.000000[0m
+[0;32mI (1761853) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1766193) test: Read Values: temperature = 29.719999, pressure = 98669.218750, humidity = -1.000000[0m
+[0;32mI (1766773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1771203) test: Read Values: temperature = 29.730000, pressure = 98669.093750, humidity = -1.000000[0m
+[0;32mI (1771683) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1776243) test: Read Values: temperature = 29.730000, pressure = 98672.687500, humidity = -1.000000[0m
+[0;32mI (1776923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1781283) test: Read Values: temperature = 29.689999, pressure = 98671.703125, humidity = -1.000000[0m
+[0;32mI (1781823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1786293) test: Read Values: temperature = 29.679998, pressure = 98670.468750, humidity = -1.000000[0m
+[0;32mI (1786743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1791293) test: Read Values: temperature = 29.660000, pressure = 98669.312500, humidity = -1.000000[0m
+[0;32mI (1791663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1796303) test: Read Values: temperature = 29.650000, pressure = 98671.601562, humidity = -1.000000[0m
+[0;32mI (1796873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1801343) test: Read Values: temperature = 29.660000, pressure = 98670.796875, humidity = -1.000000[0m
+[0;32mI (1801793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1806353) test: Read Values: temperature = 29.699999, pressure = 98671.484375, humidity = -1.000000[0m
+[0;32mI (1807013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1811393) test: Read Values: temperature = 29.730000, pressure = 98672.335938, humidity = -1.000000[0m
+[0;32mI (1812033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1816403) test: Read Values: temperature = 29.740000, pressure = 98671.875000, humidity = -1.000000[0m
+[0;32mI (1816913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1821443) test: Read Values: temperature = 29.709999, pressure = 98669.968750, humidity = -1.000000[0m
+[0;32mI (1826453) test: Read Values: temperature = 29.679998, pressure = 98668.421875, humidity = -1.000000[0m
+[0;32mI (1831463) test: Read Values: temperature = 29.670000, pressure = 98667.453125, humidity = -1.000000[0m
+[0;32mI (1835893) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1836463) test: Read Values: temperature = 29.609999, pressure = 98666.570312, humidity = -1.000000[0m
+[0;32mI (1838323) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1838343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1838623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1841473) test: Read Values: temperature = 29.570000, pressure = 98664.078125, humidity = -1.000000[0m
+[0;32mI (1842033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1846513) test: Read Values: temperature = 29.539999, pressure = 98663.578125, humidity = -1.000000[0m
+[0;32mI (1846953) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1851523) test: Read Values: temperature = 29.529999, pressure = 98664.671875, humidity = -1.000000[0m
+[0;32mI (1852173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1856523) test: Read Values: temperature = 29.519999, pressure = 98665.992188, humidity = -1.000000[0m
+[0;32mI (1857093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1861563) test: Read Values: temperature = 29.529999, pressure = 98664.507812, humidity = -1.000000[0m
+[0;32mI (1862003) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1866573) test: Read Values: temperature = 29.570000, pressure = 98667.656250, humidity = -1.000000[0m
+[0;32mI (1866923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1871573) test: Read Values: temperature = 29.580000, pressure = 98668.992188, humidity = -1.000000[0m
+[0;32mI (1872143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1876613) test: Read Values: temperature = 29.549999, pressure = 98667.046875, humidity = -1.000000[0m
+[0;32mI (1877083) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1881623) test: Read Values: temperature = 29.529999, pressure = 98667.085938, humidity = -1.000000[0m
+[0;32mI (1881973) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1886663) test: Read Values: temperature = 29.549999, pressure = 98667.000000, humidity = -1.000000[0m
+[0;32mI (1889963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1891703) test: Read Values: temperature = 29.539999, pressure = 98665.750000, humidity = -1.000000[0m
+[0;32mI (1893033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1896713) test: Read Values: temperature = 29.539999, pressure = 98666.093750, humidity = -1.000000[0m
+[0;32mI (1897333) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1901753) test: Read Values: temperature = 29.539999, pressure = 98665.265625, humidity = -1.000000[0m
+[0;32mI (1902243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1906763) test: Read Values: temperature = 29.539999, pressure = 98664.906250, humidity = -1.000000[0m
+[0;32mI (1907473) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1911803) test: Read Values: temperature = 29.549999, pressure = 98665.468750, humidity = -1.000000[0m
+[0;32mI (1912383) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1916813) test: Read Values: temperature = 29.529999, pressure = 98665.523438, humidity = -1.000000[0m
+[0;32mI (1917303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1921853) test: Read Values: temperature = 29.570000, pressure = 98664.054688, humidity = -1.000000[0m
+[0;32mI (1922523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1926863) test: Read Values: temperature = 29.599998, pressure = 98666.531250, humidity = -1.000000[0m
+[0;32mI (1927433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1931903) test: Read Values: temperature = 29.639999, pressure = 98669.859375, humidity = -1.000000[0m
+[0;32mI (1932353) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1936913) test: Read Values: temperature = 29.660000, pressure = 98669.085938, humidity = -1.000000[0m
+[0;32mI (1937573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1941953) test: Read Values: temperature = 29.639999, pressure = 98666.625000, humidity = -1.000000[0m
+[0;32mI (1942493) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1946963) test: Read Values: temperature = 29.609999, pressure = 98663.156250, humidity = -1.000000[0m
+[0;32mI (1947403) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1952043) test: Read Values: temperature = 29.559999, pressure = 98663.343750, humidity = -1.000000[0m
+[0;32mI (1952623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1957083) test: Read Values: temperature = 29.539999, pressure = 98663.554688, humidity = -1.000000[0m
+[0;32mI (1957543) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1962093) test: Read Values: temperature = 29.559999, pressure = 98665.210938, humidity = -1.000000[0m
+[0;32mI (1962463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1967103) test: Read Values: temperature = 29.570000, pressure = 98666.125000, humidity = -1.000000[0m
+[0;32mI (1967683) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1972143) test: Read Values: temperature = 29.549999, pressure = 98663.593750, humidity = -1.000000[0m
+[0;32mI (1972593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1977153) test: Read Values: temperature = 29.549999, pressure = 98663.125000, humidity = -1.000000[0m
+[0;32mI (1977513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1982193) test: Read Values: temperature = 29.559999, pressure = 98663.351562, humidity = -1.000000[0m
+[0;32mI (1982733) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1987203) test: Read Values: temperature = 29.570000, pressure = 98664.078125, humidity = -1.000000[0m
+[0;32mI (1987643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1992213) test: Read Values: temperature = 29.539999, pressure = 98663.875000, humidity = -1.000000[0m
+[0;32mI (1992873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (1997253) test: Read Values: temperature = 29.549999, pressure = 98662.929688, humidity = -1.000000[0m
+[0;32mI (1997783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2002263) test: Read Values: temperature = 29.570000, pressure = 98662.859375, humidity = -1.000000[0m
+[0;32mI (2002703) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2007303) test: Read Values: temperature = 29.580000, pressure = 98660.953125, humidity = -1.000000[0m
+[0;32mI (2007923) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2012313) test: Read Values: temperature = 29.559999, pressure = 98662.328125, humidity = -1.000000[0m
+[0;32mI (2012833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2017353) test: Read Values: temperature = 29.559999, pressure = 98661.625000, humidity = -1.000000[0m
+[0;32mI (2017753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2022363) test: Read Values: temperature = 29.559999, pressure = 98662.132812, humidity = -1.000000[0m
+[0;32mI (2022973) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2027403) test: Read Values: temperature = 29.570000, pressure = 98664.242188, humidity = -1.000000[0m
+[0;32mI (2027893) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2032413) test: Read Values: temperature = 29.580000, pressure = 98664.023438, humidity = -1.000000[0m
+[0;32mI (2032813) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2037453) test: Read Values: temperature = 29.590000, pressure = 98663.734375, humidity = -1.000000[0m
+[0;32mI (2038033) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2042463) test: Read Values: temperature = 29.619999, pressure = 98663.898438, humidity = -1.000000[0m
+[0;32mI (2042943) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2047503) test: Read Values: temperature = 29.599998, pressure = 98663.078125, humidity = -1.000000[0m
+[0;32mI (2048163) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2052513) test: Read Values: temperature = 29.590000, pressure = 98664.250000, humidity = -1.000000[0m
+[0;32mI (2053083) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2057513) test: Read Values: temperature = 29.580000, pressure = 98663.703125, humidity = -1.000000[0m
+[0;32mI (2057993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2062523) test: Read Values: temperature = 29.580000, pressure = 98663.125000, humidity = -1.000000[0m
+[0;32mI (2062913) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2067563) test: Read Values: temperature = 29.580000, pressure = 98662.953125, humidity = -1.000000[0m
+[0;32mI (2068133) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2072573) test: Read Values: temperature = 29.549999, pressure = 98661.593750, humidity = -1.000000[0m
+[0;32mI (2073053) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2077613) test: Read Values: temperature = 29.559999, pressure = 98660.250000, humidity = -1.000000[0m
+[0;32mI (2077963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2082653) test: Read Values: temperature = 29.580000, pressure = 98661.226562, humidity = -1.000000[0m
+[0;32mI (2083183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2087663) test: Read Values: temperature = 29.539999, pressure = 98658.757812, humidity = -1.000000[0m
+[0;32mI (2088103) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2092703) test: Read Values: temperature = 29.529999, pressure = 98661.601562, humidity = -1.000000[0m
+[0;32mI (2093013) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2097713) test: Read Values: temperature = 29.570000, pressure = 98662.195312, humidity = -1.000000[0m
+[0;32mI (2098243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2102713) test: Read Values: temperature = 29.590000, pressure = 98660.828125, humidity = -1.000000[0m
+[0;32mI (2103153) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2107723) test: Read Values: temperature = 29.609999, pressure = 98659.929688, humidity = -1.000000[0m
+[0;32mI (2108073) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2112763) test: Read Values: temperature = 29.639999, pressure = 98661.679688, humidity = -1.000000[0m
+[0;32mI (2113293) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2117773) test: Read Values: temperature = 29.670000, pressure = 98663.265625, humidity = -1.000000[0m
+[0;32mI (2118203) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2122813) test: Read Values: temperature = 29.699999, pressure = 98663.437500, humidity = -1.000000[0m
+[0;32mI (2123433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2127853) test: Read Values: temperature = 29.730000, pressure = 98663.085938, humidity = -1.000000[0m
+[0;32mI (2128343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2132863) test: Read Values: temperature = 29.740000, pressure = 98663.867188, humidity = -1.000000[0m
+[0;32mI (2133263) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2137903) test: Read Values: temperature = 29.769999, pressure = 98664.054688, humidity = -1.000000[0m
+[0;32mI (2138493) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2142913) test: Read Values: temperature = 29.789999, pressure = 98663.515625, humidity = -1.000000[0m
+[0;32mI (2143393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2147913) test: Read Values: temperature = 29.809999, pressure = 98663.140625, humidity = -1.000000[0m
+[0;32mI (2148313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2152923) test: Read Values: temperature = 29.840000, pressure = 98663.812500, humidity = -1.000000[0m
+[0;32mI (2154463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2157963) test: Read Values: temperature = 29.889999, pressure = 98663.328125, humidity = -1.000000[0m
+[0;32mI (2158453) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2162973) test: Read Values: temperature = 29.910000, pressure = 98661.546875, humidity = -1.000000[0m
+[0;32mI (2163673) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2168013) test: Read Values: temperature = 29.929998, pressure = 98661.679688, humidity = -1.000000[0m
+[0;32mI (2168593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2173023) test: Read Values: temperature = 29.939999, pressure = 98663.156250, humidity = -1.000000[0m
+[0;32mI (2173513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2178063) test: Read Values: temperature = 29.959999, pressure = 98663.929688, humidity = -1.000000[0m
+[0;32mI (2178433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2183073) test: Read Values: temperature = 29.969999, pressure = 98664.351562, humidity = -1.000000[0m
+[0;32mI (2183643) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2188073) test: Read Values: temperature = 30.000000, pressure = 98664.734375, humidity = -1.000000[0m
+[0;32mI (2188553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2193083) test: Read Values: temperature = 30.019999, pressure = 98663.656250, humidity = -1.000000[0m
+[0;32mI (2193783) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2198093) test: Read Values: temperature = 30.039999, pressure = 98662.765625, humidity = -1.000000[0m
+[0;32mI (2198693) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2203133) test: Read Values: temperature = 30.049999, pressure = 98662.500000, humidity = -1.000000[0m
+[0;32mI (2203613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2208143) test: Read Values: temperature = 30.070000, pressure = 98662.765625, humidity = -1.000000[0m
+[0;32mI (2208523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2213153) test: Read Values: temperature = 30.059999, pressure = 98663.257812, humidity = -1.000000[0m
+[0;32mI (2213743) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2218193) test: Read Values: temperature = 30.080000, pressure = 98662.468750, humidity = -1.000000[0m
+[0;32mI (2218663) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2223203) test: Read Values: temperature = 30.090000, pressure = 98661.343750, humidity = -1.000000[0m
+[0;32mI (2223883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2228243) test: Read Values: temperature = 30.070000, pressure = 98662.117188, humidity = -1.000000[0m
+[0;32mI (2228803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2233253) test: Read Values: temperature = 30.070000, pressure = 98664.843750, humidity = -1.000000[0m
+[0;32mI (2233713) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2238263) test: Read Values: temperature = 30.080000, pressure = 98661.835938, humidity = -1.000000[0m
+[0;32mI (2238933) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2243303) test: Read Values: temperature = 30.080000, pressure = 98660.781250, humidity = -1.000000[0m
+[0;32mI (2243863) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2248313) test: Read Values: temperature = 30.059999, pressure = 98663.375000, humidity = -1.000000[0m
+[0;32mI (2248773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2253353) test: Read Values: temperature = 30.070000, pressure = 98661.265625, humidity = -1.000000[0m
+[0;32mI (2254063) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2258363) test: Read Values: temperature = 30.080000, pressure = 98660.460938, humidity = -1.000000[0m
+[0;32mI (2259213) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2263403) test: Read Values: temperature = 30.109999, pressure = 98662.156250, humidity = -1.000000[0m
+[0;32mI (2265973) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2268413) test: Read Values: temperature = 30.129999, pressure = 98661.812500, humidity = -1.000000[0m
+[0;32mI (2270583) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2273453) test: Read Values: temperature = 30.150000, pressure = 98661.046875, humidity = -1.000000[0m
+[0;32mI (2275793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2278463) test: Read Values: temperature = 30.150000, pressure = 98662.125000, humidity = -1.000000[0m
+[0;32mI (2280883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2283503) test: Read Values: temperature = 30.160000, pressure = 98661.140625, humidity = -1.000000[0m
+[0;32mI (2285323) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2288513) test: Read Values: temperature = 30.179998, pressure = 98660.429688, humidity = -1.000000[0m
+[0;32mI (2290243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2293523) test: Read Values: temperature = 30.199999, pressure = 98662.250000, humidity = -1.000000[0m
+[0;32mI (2295153) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2298563) test: Read Values: temperature = 30.209999, pressure = 98660.625000, humidity = -1.000000[0m
+[0;32mI (2301603) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2303573) test: Read Values: temperature = 30.209999, pressure = 98659.757812, humidity = -1.000000[0m
+[0;32mI (2306833) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2308583) test: Read Values: temperature = 30.209999, pressure = 98659.960938, humidity = -1.000000[0m
+[0;32mI (2311433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2313583) test: Read Values: temperature = 30.230000, pressure = 98660.765625, humidity = -1.000000[0m
+[0;32mI (2315433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2318593) test: Read Values: temperature = 30.240000, pressure = 98660.492188, humidity = -1.000000[0m
+[0;32mI (2321573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2323603) test: Read Values: temperature = 30.219999, pressure = 98659.500000, humidity = -1.000000[0m
+[0;32mI (2326183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2328613) test: Read Values: temperature = 30.219999, pressure = 98660.679688, humidity = -1.000000[0m
+[0;32mI (2329873) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2333623) test: Read Values: temperature = 30.199999, pressure = 98659.875000, humidity = -1.000000[0m
+[0;32mI (2334173) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2338633) test: Read Values: temperature = 30.199999, pressure = 98660.375000, humidity = -1.000000[0m
+[0;32mI (2339083) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2343643) test: Read Values: temperature = 30.209999, pressure = 98659.773438, humidity = -1.000000[0m
+[0;32mI (2343993) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2348683) test: Read Values: temperature = 30.219999, pressure = 98659.671875, humidity = -1.000000[0m
+[0;32mI (2349523) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2353693) test: Read Values: temperature = 30.230000, pressure = 98660.046875, humidity = -1.000000[0m
+[0;32mI (2355363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2358703) test: Read Values: temperature = 30.219999, pressure = 98660.007812, humidity = -1.000000[0m
+[0;32mI (2360593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2363713) test: Read Values: temperature = 30.189999, pressure = 98661.304688, humidity = -1.000000[0m
+[0;32mI (2367043) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2368723) test: Read Values: temperature = 30.160000, pressure = 98660.609375, humidity = -1.000000[0m
+[0;32mI (2369193) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2373733) test: Read Values: temperature = 30.139999, pressure = 98660.820312, humidity = -1.000000[0m
+[0;32mI (2374413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2378743) test: Read Values: temperature = 30.119999, pressure = 98660.718750, humidity = -1.000000[0m
+[0;32mI (2380533) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2383783) test: Read Values: temperature = 30.099998, pressure = 98660.078125, humidity = -1.000000[0m
+[0;32mI (2385753) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2388793) test: Read Values: temperature = 30.109999, pressure = 98658.429688, humidity = -1.000000[0m
+[0;32mI (2389773) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2393803) test: Read Values: temperature = 30.109999, pressure = 98658.046875, humidity = -1.000000[0m
+[0;32mI (2395303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2398813) test: Read Values: temperature = 30.080000, pressure = 98660.437500, humidity = -1.000000[0m
+[0;32mI (2401143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2403823) test: Read Values: temperature = 30.029999, pressure = 98659.125000, humidity = -1.000000[0m
+[0;32mI (2407463) MQTT: MQTT_EVENT_PUBLISHED[0m
+����������������������������������������������������������������[0;32mI (2408833) test: Read Values: temperature = 30.019999, pressure = 98658.531250, humidity = -1.000000[0m
+[0;32mI (2410053) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2413833) test: Read Values: temperature = 30.000000, pressure = 98661.484375, humidity = -1.000000[0m
+[0;32mI (2414653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2418843) test: Read Values: temperature = 30.019999, pressure = 98664.023438, humidity = -1.000000[0m
+[0;32mI (2419883) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2423853) test: Read Values: temperature = 30.029999, pressure = 98661.187500, humidity = -1.000000[0m
+[0;32mI (2424793) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2428893) test: Read Values: temperature = 30.049999, pressure = 98659.234375, humidity = -1.000000[0m
+[0;32mI (2429403) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2433903) test: Read Values: temperature = 30.070000, pressure = 98658.875000, humidity = -1.000000[0m
+[0;32mI (2434313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2438913) test: Read Values: temperature = 30.099998, pressure = 98661.398438, humidity = -1.000000[0m
+[0;32mI (2439543) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2443923) test: Read Values: temperature = 30.099998, pressure = 98661.796875, humidity = -1.000000[0m
+[0;32mI (2445373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2448963) test: Read Values: temperature = 30.109999, pressure = 98662.828125, humidity = -1.000000[0m
+[0;32mI (2450903) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2453973) test: Read Values: temperature = 30.109999, pressure = 98660.992188, humidity = -1.000000[0m
+[0;32mI (2454593) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2458983) test: Read Values: temperature = 30.109999, pressure = 98661.976562, humidity = -1.000000[0m
+[0;32mI (2459513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2463993) test: Read Values: temperature = 30.099998, pressure = 98657.656250, humidity = -1.000000[0m
+[0;32mI (2464423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2469033) test: Read Values: temperature = 30.119999, pressure = 98657.835938, humidity = -1.000000[0m
+[0;32mI (2470253) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2474043) test: Read Values: temperature = 30.129999, pressure = 98662.640625, humidity = -1.000000[0m
+[0;32mI (2474563) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2479053) test: Read Values: temperature = 30.109999, pressure = 98660.328125, humidity = -1.000000[0m
+[0;32mI (2480093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2484063) test: Read Values: temperature = 30.139999, pressure = 98661.687500, humidity = -1.000000[0m
+[0;32mI (2484393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2489073) test: Read Values: temperature = 30.160000, pressure = 98661.304688, humidity = -1.000000[0m
+[0;32mI (2489613) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2494083) test: Read Values: temperature = 30.179998, pressure = 98662.828125, humidity = -1.000000[0m
+[0;32mI (2495143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2499093) test: Read Values: temperature = 30.209999, pressure = 98661.953125, humidity = -1.000000[0m
+[0;32mI (2500053) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2504093) test: Read Values: temperature = 30.199999, pressure = 98662.437500, humidity = -1.000000[0m
+[0;32mI (2509103) test: Read Values: temperature = 30.199999, pressure = 98661.750000, humidity = -1.000000[0m
+[0;32mI (2512353) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2513573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2514113) test: Read Values: temperature = 30.219999, pressure = 98659.828125, humidity = -1.000000[0m
+[0;32mI (2514803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2519123) test: Read Values: temperature = 30.260000, pressure = 98662.109375, humidity = -1.000000[0m
+[0;32mI (2519803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2524133) test: Read Values: temperature = 30.260000, pressure = 98659.359375, humidity = -1.000000[0m
+[0;32mI (2524633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2529143) test: Read Values: temperature = 30.269999, pressure = 98661.359375, humidity = -1.000000[0m
+[0;32mI (2529553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2534153) test: Read Values: temperature = 30.250000, pressure = 98659.171875, humidity = -1.000000[0m
+[0;32mI (2539163) test: Read Values: temperature = 30.230000, pressure = 98662.984375, humidity = -1.000000[0m
+[0;32mI (2544163) test: Read Values: temperature = 30.209999, pressure = 98662.335938, humidity = -1.000000[0m
+[0;32mI (2549173) test: Read Values: temperature = 30.199999, pressure = 98661.921875, humidity = -1.000000[0m
+[0;32mI (2554183) test: Read Values: temperature = 30.189999, pressure = 98662.500000, humidity = -1.000000[0m
+[0;32mI (2559193) test: Read Values: temperature = 30.170000, pressure = 98661.343750, humidity = -1.000000[0m
+[0;32mI (2564203) test: Read Values: temperature = 30.170000, pressure = 98661.726562, humidity = -1.000000[0m
+[0;32mI (2566483) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2566513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2567343) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2567363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2567963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2567983) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2570523) test: Read Values: temperature = 30.179998, pressure = 98662.281250, humidity = -1.000000[0m
+[0;32mI (2573483) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2575533) test: Read Values: temperature = 30.189999, pressure = 98659.781250, humidity = -1.000000[0m
+[0;32mI (2576243) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2580573) test: Read Values: temperature = 30.199999, pressure = 98660.734375, humidity = -1.000000[0m
+[0;32mI (2581163) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2585583) test: Read Values: temperature = 30.209999, pressure = 98660.281250, humidity = -1.000000[0m
+[0;32mI (2586383) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2590593) test: Read Values: temperature = 30.219999, pressure = 98663.421875, humidity = -1.000000[0m
+[0;32mI (2592513) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2595603) test: Read Values: temperature = 30.219999, pressure = 98662.226562, humidity = -1.000000[0m
+[0;32mI (2597413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2600613) test: Read Values: temperature = 30.219999, pressure = 98663.937500, humidity = -1.000000[0m
+[0;32mI (2602023) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2605623) test: Read Values: temperature = 30.240000, pressure = 98662.148438, humidity = -1.000000[0m
+[0;32mI (2606963) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2610633) test: Read Values: temperature = 30.250000, pressure = 98661.367188, humidity = -1.000000[0m
+[0;32mI (2612183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2615673) test: Read Values: temperature = 30.250000, pressure = 98662.390625, humidity = -1.000000[0m
+[0;32mI (2616183) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2620683) test: Read Values: temperature = 30.279999, pressure = 98664.625000, humidity = -1.000000[0m
+[0;32mI (2621093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2625693) test: Read Values: temperature = 30.289999, pressure = 98663.554688, humidity = -1.000000[0m
+[0;32mI (2626313) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2630703) test: Read Values: temperature = 30.289999, pressure = 98663.687500, humidity = -1.000000[0m
+[0;32mI (2631233) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2635713) test: Read Values: temperature = 30.309999, pressure = 98665.000000, humidity = -1.000000[0m
+[0;32mI (2636143) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2640723) test: Read Values: temperature = 30.320000, pressure = 98663.203125, humidity = -1.000000[0m
+[0;32mI (2641373) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2645733) test: Read Values: temperature = 30.330000, pressure = 98665.296875, humidity = -1.000000[0m
+[0;32mI (2646363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2650743) test: Read Values: temperature = 30.340000, pressure = 98663.671875, humidity = -1.000000[0m
+[0;32mI (2651203) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2655753) test: Read Values: temperature = 30.340000, pressure = 98661.734375, humidity = -1.000000[0m
+[0;32mI (2656423) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2660763) test: Read Values: temperature = 30.340000, pressure = 98663.632812, humidity = -1.000000[0m
+[0;32mI (2661333) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2665773) test: Read Values: temperature = 30.330000, pressure = 98664.289062, humidity = -1.000000[0m
+[0;32mI (2666253) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2670783) test: Read Values: temperature = 30.309999, pressure = 98662.968750, humidity = -1.000000[0m
+[0;32mI (2671173) MQTT: MQTT_EVENT_PUBLISHED[0m
+����������������������������������������������������������������[0;32mI (2675793) test: Read Values: temperature = 30.269999, pressure = 98664.078125, humidity = -1.000000[0m
+[0;32mI (2676393) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2680803) test: Read Values: temperature = 30.250000, pressure = 98661.718750, humidity = -1.000000[0m
+[0;32mI (2681303) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2685813) test: Read Values: temperature = 30.250000, pressure = 98662.250000, humidity = -1.000000[0m
+[0;32mI (2686223) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2690823) test: Read Values: temperature = 30.240000, pressure = 98663.343750, humidity = -1.000000[0m
+[0;32mI (2691133) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2695833) test: Read Values: temperature = 30.219999, pressure = 98663.585938, humidity = -1.000000[0m
+[0;32mI (2696363) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2700843) test: Read Values: temperature = 30.199999, pressure = 98665.687500, humidity = -1.000000[0m
+[0;32mI (2701273) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2705853) test: Read Values: temperature = 30.209999, pressure = 98664.710938, humidity = -1.000000[0m
+[0;32mI (2706803) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2710863) test: Read Values: temperature = 30.189999, pressure = 98666.125000, humidity = -1.000000[0m
+[0;32mI (2711413) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2715873) test: Read Values: temperature = 30.179998, pressure = 98665.500000, humidity = -1.000000[0m
+[0;32mI (2716633) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2720883) test: Read Values: temperature = 30.139999, pressure = 98664.062500, humidity = -1.000000[0m
+[0;32mI (2721553) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2725903) test: Read Values: temperature = 30.099998, pressure = 98662.953125, humidity = -1.000000[0m
+[0;32mI (2726463) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2730913) test: Read Values: temperature = 30.019999, pressure = 98665.164062, humidity = -1.000000[0m
+[0;32mI (2731383) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2735923) test: Read Values: temperature = 29.990000, pressure = 98665.500000, humidity = -1.000000[0m
+[0;32mI (2736293) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2740933) test: Read Values: temperature = 29.969999, pressure = 98664.328125, humidity = -1.000000[0m
+[0;32mI (2741823) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2745933) test: Read Values: temperature = 29.980000, pressure = 98665.812500, humidity = -1.000000[0m
+[0;32mI (2746433) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2750943) test: Read Values: temperature = 30.010000, pressure = 98666.320312, humidity = -1.000000[0m
+[0;32mI (2751653) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2755953) test: Read Values: temperature = 30.039999, pressure = 98667.867188, humidity = -1.000000[0m
+[0;32mI (2756573) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2760963) test: Read Values: temperature = 30.059999, pressure = 98668.210938, humidity = -1.000000[0m
+[0;32mI (2762093) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2765973) test: Read Values: temperature = 30.080000, pressure = 98664.906250, humidity = -1.000000[0m
+[0;32mI (2766403) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2770983) test: Read Values: temperature = 30.099998, pressure = 98663.640625, humidity = -1.000000[0m
+[0;32mI (2771623) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2775993) test: Read Values: temperature = 30.119999, pressure = 98666.000000, humidity = -1.000000[0m
+[0;32mI (2776543) MQTT: MQTT_EVENT_PUBLISHED[0m
+[0;32mI (2781003) test: Read Values: temperature = 30.12999

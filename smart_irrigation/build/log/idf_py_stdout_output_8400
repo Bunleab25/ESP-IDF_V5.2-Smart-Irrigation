@@ -1,0 +1,212 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15632
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-772-ge7fe0f3a0e 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 18 2025 15:05:28[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f960h (129376) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=0002f988 vaddr=3ffb0000 size=00690h (  1680) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9ee64h (650852) map[0m
+[0;32mI (379) esp_image: segment 3: paddr=000cee8c vaddr=3ffb0690 size=03750h ( 14160) load[0m
+[0;32mI (384) esp_image: segment 4: paddr=000d25e4 vaddr=40080000 size=18450h ( 99408) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (456) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     test_wifi[0m
+[0;32mI (465) cpu_start: App version:      1[0m
+[0;32mI (469) cpu_start: Compile time:     Jun 18 2025 15:03:54[0m
+[0;32mI (475) cpu_start: ELF file SHA256:  8284d8d7a...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.5-772-ge7fe0f3a0e[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8310 len 00027CF0 (159 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40098450 len 00007BB0 (30 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc0388, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: 8fc9c18[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (793) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (813) wifi:mode : sta (00:4b:12:90:7d:d4)[0m
+[0;32mI (813) wifi:enable tsf[0m
+[0;32mI (813) wifi_simple: WiFi initialized in mode 1[0m
+[0;32mI (813) wifi_simple: STA started[0m
+[0;32mI (1433) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (1443) wifi:state: init -> auth (b0)[0m
+[0;32mI (1443) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1453) wifi:state: assoc -> run (10)[0m
+[0;32mI (1533) wifi:connected with bunleab, aid = 3, channel 6, BW20, bssid = 32:e3:a4:0c:f5:b2[0m
+[0;32mI (1533) wifi:security: WPA2-PSK, phy: bgn, rssi: -23[0m
+[0;32mI (1543) wifi:pm start, type: 1[0m
+
+[0;32mI (1543) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1553) wifi_simple: Connected to AP[0m
+[0;32mI (1613) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3053) esp_netif_handlers: sta ip: 192.168.137.127, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (3053) wifi_simple: Got IP: 192.168.137.127[0m
+[0;32mI (3823) esp32_demo_mqtt: Connected to WiFi[0m
+[0;32mI (3823) bmx280: Probing for BMP280/BME280 sensors on I2C 0[0m
+[0;32mI (3823) main_task: Returned from app_main()[0m
+[0;32mI (3823) bmx280: Probe success: address=ec, id=58[0m
+[0;32mI (3843) bmx280: Reading out calibration values...[0m
+[0;32mI (3843) bmx280: Read Low Bank.[0m
+[0;32mI (3843) bmx280: Dumping calibration...[0m
+[0;32mI (3843) bmx280: 71 6c 3b 68 18 fc 06 91 c6 d6 d0 0b 15 0b 03 01 [0m
+[0;32mI (3853) bmx280: f9 ff 8c 3c f8 c6 70 17 00 00 00 00 00 00 00 00 [0m
+[0;32mI (3863) bmx280: 00 00 00 00 [0m
+[0;32mI (6913) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6923) test: Read Values: temp = 28.070000, pres = 98585.421875, hum = -1.000000[0m
+[0;32mI (7933) test: Read Values: temp = 28.099998, pres = 98584.640625, hum = -1.000000[0m
+[0;32mI (8943) test: Read Values: temp = 28.119999, pres = 98585.984375, hum = -1.000000[0m
+[0;32mI (9953) test: Read Values: temp = 28.129999, pres = 98586.234375, hum = -1.000000[0m
+[0;32mI (10953) test: Read Values: temp = 28.139999, pres = 98586.625000, hum = -1.000000[0m
+[0;32mI (11963) test: Read Values: temp = 28.150000, pres = 98588.406250, hum = -1.000000[0m
+[0;32mI (12973) test: Read Values: temp = 28.160000, pres = 98588.640625, hum = -1.000000[0m
+[0;32mI (13983) test: Read Values: temp = 28.160000, pres = 98588.312500, hum = -1.000000[0m
+[0;32mI (14983) test: Read Values: temp = 28.170000, pres = 98588.359375, hum = -1.000000[0m
+[0;32mI (15993) test: Read Values: temp = 28.170000, pres = 98590.070312, hum = -1.000000[0m
+[0;32mI (17003) test: Read Values: temp = 28.170000, pres = 98589.218750, hum = -1.000000[0m
+[0;32mI (18013) test: Read Values: temp = 28.170000, pres = 98588.062500, hum = -1.000000[0m
+[0;32mI (19013) test: Read Values: temp = 28.189999, pres = 98588.703125, hum = -1.000000[0m
+[0;32mI (20023) test: Read Values: temp = 28.189999, pres = 98587.859375, hum = -1.000000[0m
+[0;32mI (21033) test: Read Values: temp = 28.189999, pres = 98589.218750, hum = -1.000000[0m
+[0;32mI (22043) test: Read Values: temp = 28.189999, pres = 98589.234375, hum = -1.000000[0m
+[0;32mI (23043) test: Read Values: temp = 28.189999, pres = 98588.390625, hum = -1.000000[0m
+[0;32mI (24053) test: Read Values: temp = 28.189999, pres = 98589.242188, hum = -1.000000[0m
+[0;32mI (25063) test: Read Values: temp = 28.189999, pres = 98589.242188, hum = -1.000000[0m
+[0;32mI (26073) test: Read Values: temp = 28.199999, pres = 98588.921875, hum = -1.000000[0m
+[0;32mI (27073) test: Read Values: temp = 28.199999, pres = 98589.492188, hum = -1.000000[0m
+[0;32mI (28083) test: Read Values: temp = 28.209999, pres = 98590.382812, hum = -1.000000[0m
+[0;32mI (29093) test: Read Values: temp = 28.219999, pres = 98591.140625, hum = -1.000000[0m
+[0;32mI (30103) test: Read Values: temp = 28.230000, pres = 98590.328125, hum = -1.000000[0m
+[0;32mI (31103) test: Read Values: temp = 28.230000, pres = 98589.703125, hum = -1.000000[0m
+[0;32mI (32113) test: Read Values: temp = 28.240000, pres = 98587.890625, hum = -1.000000[0m
+[0;32mI (33123) test: Read Values: temp = 28.250000, pres = 98589.125000, hum = -1.000000[0m
+[0;32mI (34133) test: Read Values: temp = 28.260000, pres = 98590.187500, hum = -1.000000[0m
+[0;32mI (35133) test: Read Values: temp = 28.260000, pres = 98589.867188, hum = -1.000000[0m
+[0;32mI (36143) test: Read Values: temp = 28.260000, pres = 98589.375000, hum = -1.000000[0m
+[0;32mI (37153) test: Read Values: temp = 28.269999, pres = 98589.953125, hum = -1.000000[0m
+[0;32mI (38163) test: Read Values: temp = 28.269999, pres = 98590.281250, hum = -1.000000[0m
+[0;32mI (39163) test: Read Values: temp = 28.269999, pres = 98590.632812, hum = -1.000000[0m
+[0;32mI (40173) test: Read Values: temp = 28.269999, pres = 98590.484375, hum = -1.000000[0m
+[0;32mI (41183) test: Read Values: temp = 28.269999, pres = 98588.765625, hum = -1.000000[0m
+[0;32mI (42193) test: Read Values: temp = 28.260000, pres = 98587.843750, hum = -1.000000[0m
+[0;32mI (43193) test: Read Values: temp = 28.269999, pres = 98590.148438, hum = -1.000000[0m
+[0;32mI (44203) test: Read Values: temp = 28.269999, pres = 98590.632812, hum = -1.000000[0m
+[0;32mI (45213) test: Read Values: temp = 28.260000, pres = 98589.718750, hum = -1.000000[0m
+[0;32mI (46223) test: Read Values: temp = 28.269999, pres = 98590.484375, hum = -1.000000[0m
+[0;32mI (47223) test: Read Values: temp = 28.269999, pres = 98590.843750, hum = -1.000000[0m
+[0;32mI (48233) test: Read Values: temp = 28.269999, pres = 98590.671875, hum = -1.000000[0m
+[0;32mI (49243) test: Read Values: temp = 28.269999, pres = 98590.484375, hum = -1.000000[0m
+[0;32mI (50253) test: Read Values: temp = 28.279999, pres = 98590.531250, hum = -1.000000[0m
+[0;32mI (51253) test: Read Values: temp = 28.279999, pres = 98590.046875, hum = -1.000000[0m
+[0;32mI (52263) test: Read Values: temp = 28.289999, pres = 98589.890625, hum = -1.000000[0m
+[0;32mI (53273) test: Read Values: temp = 28.279999, pres = 98589.203125, hum = -1.000000[0m
+[0;32mI (54283) test: Read Values: temp = 28.289999, pres = 98589.890625, hum = -1.000000[0m
+[0;32mI (55283) test: Read Values: temp = 28.289999, pres = 98591.632812, hum = -1.000000[0m
+[0;32mI (56293) test: Read Values: temp = 28.299999, pres = 98591.500000, hum = -1.000000[0m
+[0;32mI (57303) test: Read Values: temp = 28.289999, pres = 98591.656250, hum = -1.000000[0m
+[0;32mI (58313) test: Read Values: temp = 28.289999, pres = 98590.953125, hum = -1.000000[0m
+[0;32mI (59313) test: Read Values: temp = 28.279999, pres = 98590.046875, hum = -1.000000[0m
+[0;32mI (60323) test: Read Values: temp = 28.279999, pres = 98589.187500, hum = -1.000000[0m
+[0;32mI (61333) test: Read Values: temp = 28.279999, pres = 98589.359375, hum = -1.000000[0m
+[0;32mI (62343) test: Read Values: temp = 28.269999, pres = 98589.968750, hum = -1.000000[0m
+[0;32mI (63343) test: Read Values: temp = 28.260000, pres = 98590.359375, hum = -1.000000[0m
+[0;32mI (64353) test: Read Values: temp = 28.269999, pres = 98591.656250, hum = -1.000000[0m
+[0;32mI (65363) test: Read Values: temp = 28.269999, pres = 98591.531250, hum = -1.000000[0m
+[0;32mI (66373) test: Read Values: temp = 28.269999, pres = 98591.320312, hum = -1.000000[0m
+[0;32mI (67373) test: Read Values: temp = 28.269999, pres = 98592.187500, hum = -1.000000[0m
+[0;32mI (68383) test: Read Values: temp = 28.269999, pres = 98592.718750, hum = -1.000000[0m
+[0;32mI (69393) test: Read Values: temp = 28.269999, pres = 98593.210938, hum = -1.000000[0m
+[0;32mI (70403) test: Read Values: temp = 28.269999, pres = 98592.000000, hum = -1.000000[0m
+[0;32mI (71403) test: Read Values: temp = 28.260000, pres = 98591.554688, hum = -1.000000[0m
+[0;32mI (72413) test: Read Values: temp = 28.250000, pres = 98590.000000, hum = -1.000000[0m
+[0;32mI (73423) test: Read Values: temp = 28.260000, pres = 98590.375000, hum = -1.000000[0m
+[0;32mI (74433) test: Read Values: temp = 28.269999, pres = 98590.953125, hum = -1.000000[0m
+[0;32mI (75433) test: Read Values: temp = 28.269999, pres = 98591.679688, hum = -1.000000[0m
+[0;32mI (76443) test: Read Values: temp = 28.269999, pres = 98591.484375, hum = -1.000000[0m
+[0;32mI (77453) test: Read Values: temp = 28.269999, pres = 98592.687500, hum = -1.000000[0m
+[0;32mI (78463) test: Read Values: temp = 28.269999, pres = 98592.375000, hum = -1.000000[0m
+[0;32mI (79463) test: Read Values: temp = 28.279999, pres = 98592.593750, hum = -1.000000[0m
+[0;32mI (80473) test: Read Values: temp = 28.269999, pres = 98590.843750, hum = -1.000000[0m
+[0;32mI (81483) test: Read Values: temp = 28.279999, pres = 98591.585938, hum = -1.000000[0m
+[0;32mI (82493) test: Read Values: temp = 28.279999, pres = 98592.257812, hum = -1.000000[0m
+[0;32mI (83493) test: Read Values: temp = 28.289999, pres = 98592.796875, hum = -1.000000[0m
+[0;32mI (84503) test: Read Values: temp = 28.279999, pres = 98591.406250, hum = -1.000000[0m
+[0;32mI (85513) test: Read Values: temp = 28.289999, pres = 98591.312500, hum = -1.000000[0m
+[0;32mI (86523) test: Read Values: temp = 28.299999, pres = 98591.335938, hum = -1.000000[0m
+[0;32mI (87523) test: Read Values: temp = 28.299999, pres = 98590.500000, hum = -1.000000[0m
+[0;32mI (88533) test: Read Values: temp = 28.299999, pres = 98591.718750, hum = -1.000000[0m
+[0;32mI (89543) test: Read Values: temp = 28.299999, pres = 98590.875000, hum = -1.000000[0m
+[0;32mI (90553) test: Read Values: temp = 28.309999, pres = 98591.945312, hum = -1.000000[0m
+[0;32mI (91553) test: Read Values: temp = 28.309999, pres = 98592.281250, hum = -1.000000[0m
+[0;32mI (92563) test: Read Values: temp = 28.299999, pres = 98592.750000, hum = -1.000000[0m
+[0;32mI (93573) test: Read Values: temp = 28.299999, pres = 98592.929688, hum = -1.000000[0m
+[0;32mI (94583) test: Read Values: temp = 28.299999, pres = 98592.226562, hum = -1.000000[0m
+[0;32mI (95583) test: Read Values: temp = 28.289999, pres = 98592.335938, hum = -1.000000[0m
+[0;32mI (96593) test: Read Values: temp = 28.299999, pres = 98591.671875, hum = -1.000000[0m
+[0;32mI (97603) test: Read Values: temp = 28.299999, pres = 98591.335938, hum = -1.000000[0m
+[0;32mI (98613) test: Read Values: temp = 28.289999, pres = 98591.148438, hum = -1.000000[0m
+[0;32mI (99613) test: Read Values: temp = 28.289999, pres = 98592.171875, hum = -1.000000[0m
+[0;32mI (100623) test: Read Values: temp = 28.299999, pres = 98592.203125, hum = -1.000000[0m
+[0;32mI (101633) test: Read Values: temp = 28.299999, pres = 98592.703125, hum = -1.000000[0m
+[0;32mI (102643) test: Read Values: temp = 28.299999, pres = 98592.359375, hum = -1.000000[0m
+[0;32mI (103643) test: Read Values: temp = 28.299999, pres = 98592.703125, hum = -1.000000[0m
+[0;32mI (104653) test: Read Values: temp = 28.299999, pres = 98592.375000, hum = -1.000000[0m
+[0;32mI (105663) test: Read Values: temp = 28.289999, pres = 98593.171875, hum = -1.000000[0m
+[0;32mI (106673) test: Read Values: temp = 28.299999, pres = 98592.867188, hum = -1.000000[0m
+[0;32mI (107673) test: Read Values: temp = 28.299999, pres = 98591.859375, hum = -1.000000[0m
+[0;32mI (108683) test: Read Values: temp = 28.299999, pres = 98592.187500, hum = -1.000000[0m
+[0;32mI (109693) test: Read Values: temp = 28.299999, pres = 98592.867188, hum = -1.000000[0m
+[0;32mI (110703) 

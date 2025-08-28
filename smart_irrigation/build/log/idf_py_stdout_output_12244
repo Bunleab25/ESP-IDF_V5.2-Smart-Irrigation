@@ -1,0 +1,634 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15632
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.5-772-ge7fe0f3a0e 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 18 2025 15:05:28[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f960h (129376) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=0002f988 vaddr=3ffb0000 size=00690h (  1680) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9ee64h (650852) map[0m
+[0;32mI (379) esp_image: segment 3: paddr=000cee8c vaddr=3ffb0690 size=03750h ( 14160) load[0m
+[0;32mI (384) esp_image: segment 4: paddr=000d25e4 vaddr=40080000 size=18450h ( 99408) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (456) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     test_wifi[0m
+[0;32mI (465) cpu_start: App version:      1[0m
+[0;32mI (469) cpu_start: Compile time:     Jun 18 2025 15:03:54[0m
+[0;32mI (475) cpu_start: ELF file SHA256:  605243e21...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.5-772-ge7fe0f3a0e[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8310 len 00027CF0 (159 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40098450 len 00007BB0 (30 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+[0;32mI (613) wifi:wifi driver task: 3ffc0388, prio:23, stack:6656, core=0[0m
+[0;32mI (623) wifi:wifi firmware version: 8fc9c18[0m
+[0;32mI (623) wifi:wifi certification version: v7.0[0m
+[0;32mI (623) wifi:config NVS flash: enabled[0m
+[0;32mI (623) wifi:config nano formating: disabled[0m
+[0;32mI (623) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (633) wifi:Init management short buffer num: 32[0m
+[0;32mI (643) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (643) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (653) wifi:Init static rx buffer num: 10[0m
+[0;32mI (653) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (793) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (833) wifi:mode : sta (00:4b:12:90:7d:d4)[0m
+[0;32mI (833) wifi:enable tsf[0m
+[0;32mI (833) wifi_simple: WiFi initialized in mode 1[0m
+[0;32mI (833) wifi_simple: STA started[0m
+[0;32mI (853) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (853) wifi:state: init -> auth (b0)[0m
+[0;32mI (863) wifi:state: auth -> assoc (0)[0m
+[0;32mI (873) wifi:state: assoc -> run (10)[0m
+[0;32mI (913) wifi:connected with bunleab, aid = 6, channel 6, BW20, bssid = 32:e3:a4:0c:f5:b2[0m
+[0;32mI (913) wifi:security: WPA2-PSK, phy: bgn, rssi: -20[0m
+[0;32mI (923) wifi:pm start, type: 1[0m
+
+[0;32mI (923) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (933) wifi_simple: Connected to AP[0m
+[0;32mI (963) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2933) esp_netif_handlers: sta ip: 192.168.137.127, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2933) wifi_simple: Got IP: 192.168.137.127[0m
+[0;32mI (3843) bme_wifi_mqtt: Connected to WiFi[0m
+[0;32mI (3843) bmx280: Probing for BMP280/BME280 sensors on I2C 0[0m
+[0;32mI (3843) main_task: Returned from app_main()[0m
+[0;32mI (3843) bmx280: Probe success: address=ec, id=58[0m
+[0;32mI (3863) bmx280: Reading out calibration values...[0m
+[0;32mI (3863) bmx280: Read Low Bank.[0m
+[0;32mI (3863) bmx280: Dumping calibration...[0m
+[0;32mI (3863) bmx280: 71 6c 3b 68 18 fc 06 91 c6 d6 d0 0b 15 0b 03 01 [0m
+[0;32mI (3873) bmx280: f9 ff 8c 3c f8 c6 70 17 00 00 00 00 00 00 00 00 [0m
+[0;32mI (3883) bmx280: 00 00 00 00 [0m
+[0;32mI (6493) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6503) test: Read Values: temp = 28.250000, pres = 98583.687500, hum = -1.000000[0m
+[0;32mI (7503) test: Read Values: temp = 28.260000, pres = 98585.968750, hum = -1.000000[0m
+[0;32mI (8513) test: Read Values: temp = 28.250000, pres = 98584.703125, hum = -1.000000[0m
+[0;32mI (9523) test: Read Values: temp = 28.260000, pres = 98586.125000, hum = -1.000000[0m
+[0;32mI (10533) test: Read Values: temp = 28.260000, pres = 98587.312500, hum = -1.000000[0m
+[0;32mI (11533) test: Read Values: temp = 28.260000, pres = 98587.328125, hum = -1.000000[0m
+[0;32mI (12543) test: Read Values: temp = 28.260000, pres = 98586.820312, hum = -1.000000[0m
+[0;32mI (13553) test: Read Values: temp = 28.250000, pres = 98587.781250, hum = -1.000000[0m
+[0;32mI (14563) test: Read Values: temp = 28.250000, pres = 98587.937500, hum = -1.000000[0m
+[0;32mI (15563) test: Read Values: temp = 28.250000, pres = 98587.953125, hum = -1.000000[0m
+[0;32mI (16573) test: Read Values: temp = 28.250000, pres = 98587.578125, hum = -1.000000[0m
+[0;32mI (17583) test: Read Values: temp = 28.240000, pres = 98587.390625, hum = -1.000000[0m
+[0;32mI (18593) test: Read Values: temp = 28.250000, pres = 98587.250000, hum = -1.000000[0m
+[0;32mI (19633) test: Read Values: temp = 28.250000, pres = 98586.937500, hum = -1.000000[0m
+[0;32mI (20643) test: Read Values: temp = 28.250000, pres = 98586.750000, hum = -1.000000[0m
+[0;32mI (21653) test: Read Values: temp = 28.250000, pres = 98586.046875, hum = -1.000000[0m
+[0;32mI (22663) test: Read Values: temp = 28.240000, pres = 98585.015625, hum = -1.000000[0m
+[0;32mI (23663) test: Read Values: temp = 28.250000, pres = 98584.343750, hum = -1.000000[0m
+[0;32mI (24673) test: Read Values: temp = 28.250000, pres = 98584.515625, hum = -1.000000[0m
+[0;32mI (25683) test: Read Values: temp = 28.240000, pres = 98583.484375, hum = -1.000000[0m
+[0;32mI (26723) test: Read Values: temp = 28.250000, pres = 98584.687500, hum = -1.000000[0m
+[0;32mI (27733) test: Read Values: temp = 28.240000, pres = 98585.015625, hum = -1.000000[0m
+[0;32mI (28743) test: Read Values: temp = 28.240000, pres = 98584.453125, hum = -1.000000[0m
+[0;32mI (29753) test: Read Values: temp = 28.240000, pres = 98584.101562, hum = -1.000000[0m
+[0;32mI (30763) test: Read Values: temp = 28.240000, pres = 98585.015625, hum = -1.000000[0m
+[0;32mI (31763) test: Read Values: temp = 28.250000, pres = 98585.710938, hum = -1.000000[0m
+[0;32mI (32773) test: Read Values: temp = 28.250000, pres = 98586.578125, hum = -1.000000[0m
+[0;32mI (33783) test: Read Values: temp = 28.250000, pres = 98587.093750, hum = -1.000000[0m
+[0;32mI (34793) test: Read Values: temp = 28.250000, pres = 98585.906250, hum = -1.000000[0m
+[0;32mI (35793) test: Read Values: temp = 28.250000, pres = 98585.546875, hum = -1.000000[0m
+[0;32mI (36803) test: Read Values: temp = 28.250000, pres = 98586.914062, hum = -1.000000[0m
+[0;32mI (37813) test: Read Values: temp = 28.250000, pres = 98586.593750, hum = -1.000000[0m
+[0;32mI (38823) test: Read Values: temp = 28.250000, pres = 98587.101562, hum = -1.000000[0m
+[0;32mI (39823) test: Read Values: temp = 28.250000, pres = 98586.937500, hum = -1.000000[0m
+[0;32mI (40833) test: Read Values: temp = 28.250000, pres = 98586.062500, hum = -1.000000[0m
+[0;32mI (41843) test: Read Values: temp = 28.250000, pres = 98585.210938, hum = -1.000000[0m
+[0;32mI (42853) test: Read Values: temp = 28.250000, pres = 98585.039062, hum = -1.000000[0m
+[0;32mI (43853) test: Read Values: temp = 28.250000, pres = 98584.890625, hum = -1.000000[0m
+[0;32mI (44863) test: Read Values: temp = 28.250000, pres = 98584.718750, hum = -1.000000[0m
+[0;32mI (45873) test: Read Values: temp = 28.260000, pres = 98584.062500, hum = -1.000000[0m
+[0;32mI (46883) test: Read Values: temp = 28.260000, pres = 98584.742188, hum = -1.000000[0m
+[0;32mI (47893) test: Read Values: temp = 28.260000, pres = 98584.906250, hum = -1.000000[0m
+[0;32mI (48893) test: Read Values: temp = 28.260000, pres = 98584.250000, hum = -1.000000[0m
+[0;32mI (49903) test: Read Values: temp = 28.260000, pres = 98583.414062, hum = -1.000000[0m
+[0;32mI (50913) test: Read Values: temp = 28.250000, pres = 98584.039062, hum = -1.000000[0m
+[0;32mI (51923) test: Read Values: temp = 28.260000, pres = 98583.890625, hum = -1.000000[0m
+[0;32mI (52923) test: Read Values: temp = 28.260000, pres = 98584.585938, hum = -1.000000[0m
+[0;32mI (53933) test: Read Values: temp = 28.260000, pres = 98583.398438, hum = -1.000000[0m
+[0;32mI (54943) test: Read Values: temp = 28.250000, pres = 98581.632812, hum = -1.000000[0m
+[0;32mI (55953) test: Read Values: temp = 28.250000, pres = 98582.304688, hum = -1.000000[0m
+[0;32mI (56963) test: Read Values: temp = 28.240000, pres = 98583.484375, hum = -1.000000[0m
+[0;32mI (57963) test: Read Values: temp = 28.240000, pres = 98582.757812, hum = -1.000000[0m
+[0;32mI (58973) test: Read Values: temp = 28.240000, pres = 98582.585938, hum = -1.000000[0m
+[0;32mI (59983) test: Read Values: temp = 28.240000, pres = 98583.453125, hum = -1.000000[0m
+[0;32mI (60993) test: Read Values: temp = 28.240000, pres = 98582.968750, hum = -1.000000[0m
+[0;32mI (61993) test: Read Values: temp = 28.240000, pres = 98582.781250, hum = -1.000000[0m
+[0;32mI (63003) test: Read Values: temp = 28.240000, pres = 98583.648438, hum = -1.000000[0m
+[0;32mI (64013) test: Read Values: temp = 28.240000, pres = 98582.453125, hum = -1.000000[0m
+[0;32mI (65023) test: Read Values: temp = 28.240000, pres = 98582.609375, hum = -1.000000[0m
+[0;32mI (66023) test: Read Values: temp = 28.240000, pres = 98582.906250, hum = -1.000000[0m
+[0;32mI (67033) test: Read Values: temp = 28.240000, pres = 98583.421875, hum = -1.000000[0m
+[0;32mI (68043) test: Read Values: temp = 28.219999, pres = 98581.437500, hum = -1.000000[0m
+[0;32mI (69053) test: Read Values: temp = 28.219999, pres = 98581.609375, hum = -1.000000[0m
+[0;32mI (70053) test: Read Values: temp = 28.230000, pres = 98582.171875, hum = -1.000000[0m
+[0;32mI (71063) test: Read Values: temp = 28.230000, pres = 98581.671875, hum = -1.000000[0m
+[0;32mI (72073) test: Read Values: temp = 28.230000, pres = 98581.671875, hum = -1.000000[0m
+[0;32mI (73083) test: Read Values: temp = 28.230000, pres = 98581.164062, hum = -1.000000[0m
+[0;32mI (74093) test: Read Values: temp = 28.230000, pres = 98581.523438, hum = -1.000000[0m
+[0;32mI (75093) test: Read Values: temp = 28.240000, pres = 98582.734375, hum = -1.000000[0m
+[0;32mI (76103) test: Read Values: temp = 28.240000, pres = 98580.859375, hum = -1.000000[0m
+[0;32mI (77113) test: Read Values: temp = 28.240000, pres = 98580.562500, hum = -1.000000[0m
+[0;32mI (78123) test: Read Values: temp = 28.240000, pres = 98582.265625, hum = -1.000000[0m
+[0;32mI (79123) test: Read Values: temp = 28.240000, pres = 98583.093750, hum = -1.000000[0m
+[0;32mI (80133) test: Read Values: temp = 28.230000, pres = 98581.523438, hum = -1.000000[0m
+[0;32mI (81143) test: Read Values: temp = 28.240000, pres = 98582.757812, hum = -1.000000[0m
+[0;32mI (82153) test: Read Values: temp = 28.240000, pres = 98582.265625, hum = -1.000000[0m
+[0;32mI (83153) test: Read Values: temp = 28.240000, pres = 98583.968750, hum = -1.000000[0m
+[0;32mI (84163) test: Read Values: temp = 28.240000, pres = 98583.484375, hum = -1.000000[0m
+[0;32mI (85173) test: Read Values: temp = 28.240000, pres = 98582.921875, hum = -1.000000[0m
+[0;32mI (86183) test: Read Values: temp = 28.240000, pres = 98583.625000, hum = -1.000000[0m
+[0;32mI (87183) test: Read Values: temp = 28.230000, pres = 98583.234375, hum = -1.000000[0m
+[0;32mI (88193) test: Read Values: temp = 28.230000, pres = 98581.984375, hum = -1.000000[0m
+[0;32mI (89203) test: Read Values: temp = 28.219999, pres = 98582.468750, hum = -1.000000[0m
+[0;32mI (90213) test: Read Values: temp = 28.219999, pres = 98583.640625, hum = -1.000000[0m
+[0;32mI (91213) test: Read Values: temp = 28.219999, pres = 98582.968750, hum = -1.000000[0m
+[0;32mI (92223) test: Read Values: temp = 28.219999, pres = 98582.781250, hum = -1.000000[0m
+[0;32mI (93233) test: Read Values: temp = 28.219999, pres = 98583.140625, hum = -1.000000[0m
+[0;32mI (94243) test: Read Values: temp = 28.219999, pres = 98584.320312, hum = -1.000000[0m
+[0;32mI (95243) test: Read Values: temp = 28.209999, pres = 98583.265625, hum = -1.000000[0m
+[0;32mI (96253) test: Read Values: temp = 28.209999, pres = 98582.546875, hum = -1.000000[0m
+[0;32mI (97263) test: Read Values: temp = 28.209999, pres = 98581.359375, hum = -1.000000[0m
+[0;32mI (98273) test: Read Values: temp = 28.209999, pres = 98583.101562, hum = -1.000000[0m
+[0;32mI (99273) test: Read Values: temp = 28.219999, pres = 98583.125000, hum = -1.000000[0m
+[0;32mI (100283) test: Read Values: temp = 28.209999, pres = 98582.203125, hum = -1.000000[0m
+[0;32mI (101293) test: Read Values: temp = 28.209999, pres = 98583.203125, hum = -1.000000[0m
+[0;32mI (102303) test: Read Values: temp = 28.199999, pres = 98583.000000, hum = -1.000000[0m
+[0;32mI (103303) test: Read Values: temp = 28.199999, pres = 98582.320312, hum = -1.000000[0m
+[0;32mI (104313) test: Read Values: temp = 28.199999, pres = 98582.125000, hum = -1.000000[0m
+[0;32mI (105323) test: Read Values: temp = 28.199999, pres = 98583.640625, hum = -1.000000[0m
+[0;32mI (106333) test: Read Values: temp = 28.199999, pres = 98582.125000, hum = -1.000000[0m
+[0;32mI (107333) test: Read Values: temp = 28.199999, pres = 98580.578125, hum = -1.000000[0m
+[0;32mI (108343) test: Read Values: temp = 28.189999, pres = 98579.703125, hum = -1.000000[0m
+[0;32mI (109353) test: Read Values: temp = 28.189999, pres = 98579.343750, hum = -1.000000[0m
+[0;32mI (110363) test: Read Values: temp = 28.189999, pres = 98578.671875, hum = -1.000000[0m
+[0;32mI (111363) test: Read Values: temp = 28.199999, pres = 98579.218750, hum = -1.000000[0m
+[0;32mI (112413) test: Read Values: temp = 28.189999, pres = 98581.218750, hum = -1.000000[0m
+[0;32mI (113423) test: Read Values: temp = 28.189999, pres = 98580.734375, hum = -1.000000[0m
+[0;32mI (114423) test: Read Values: temp = 28.189999, pres = 98579.875000, hum = -1.000000[0m
+[0;32mI (115433) test: Read Values: temp = 28.189999, pres = 98580.046875, hum = -1.000000[0m
+[0;32mI (116443) test: Read Values: temp = 28.199999, pres = 98580.281250, hum = -1.000000[0m
+[0;32mI (117453) test: Read Values: temp = 28.209999, pres = 98580.164062, hum = -1.000000[0m
+[0;32mI (118453) test: Read Values: temp = 28.189999, pres = 98579.203125, hum = -1.000000[0m
+[0;32mI (119463) test: Read Values: temp = 28.189999, pres = 98578.515625, hum = -1.000000[0m
+[0;32mI (120473) test: Read Values: temp = 28.189999, pres = 98579.023438, hum = -1.000000[0m
+[0;32mI (121483) test: Read Values: temp = 28.189999, pres = 98578.859375, hum = -1.000000[0m
+[0;32mI (122483) test: Read Values: temp = 28.199999, pres = 98580.281250, hum = -1.000000[0m
+[0;32mI (123493) test: Read Values: temp = 28.199999, pres = 98580.640625, hum = -1.000000[0m
+[0;32mI (124503) test: Read Values: temp = 28.199999, pres = 98579.109375, hum = -1.000000[0m
+[0;32mI (125513) test: Read Values: temp = 28.199999, pres = 98580.093750, hum = -1.000000[0m
+[0;32mI (126513) test: Read Values: temp = 28.209999, pres = 98579.296875, hum = -1.000000[0m
+[0;32mI (127523) test: Read Values: temp = 28.209999, pres = 98579.296875, hum = -1.000000[0m
+[0;32mI (128533) test: Read Values: temp = 28.209999, pres = 98579.500000, hum = -1.000000[0m
+[0;32mI (129543) test: Read Values: temp = 28.209999, pres = 98578.828125, hum = -1.000000[0m
+[0;32mI (130543) test: Read Values: temp = 28.209999, pres = 98579.351562, hum = -1.000000[0m
+[0;32mI (131553) test: Read Values: temp = 28.209999, pres = 98578.328125, hum = -1.000000[0m
+[0;32mI (132563) test: Read Values: temp = 28.209999, pres = 98578.843750, hum = -1.000000[0m
+[0;32mI (133573) test: Read Values: temp = 28.209999, pres = 98579.859375, hum = -1.000000[0m
+[0;32mI (134573) test: Read Values: temp = 28.219999, pres = 98579.031250, hum = -1.000000[0m
+[0;32mI (135583) test: Read Values: temp = 28.209999, pres = 98578.671875, hum = -1.000000[0m
+[0;32mI (136593) test: Read Values: temp = 28.209999, pres = 98578.656250, hum = -1.000000[0m
+[0;32mI (137603) test: Read Values: temp = 28.209999, pres = 98579.179688, hum = -1.000000[0m
+[0;32mI (138603) test: Read Values: temp = 28.219999, pres = 98579.718750, hum = -1.000000[0m
+[0;32mI (139613) test: Read Values: temp = 28.219999, pres = 98581.109375, hum = -1.000000[0m
+[0;32mI (140623) test: Read Values: temp = 28.209999, pres = 98581.031250, hum = -1.000000[0m
+[0;32mI (141633) test: Read Values: temp = 28.209999, pres = 98580.671875, hum = -1.000000[0m
+[0;32mI (142633) test: Read Values: temp = 28.209999, pres = 98580.015625, hum = -1.000000[0m
+[0;32mI (143643) test: Read Values: temp = 28.209999, pres = 98580.000000, hum = -1.000000[0m
+[0;32mI (144653) test: Read Values: temp = 28.209999, pres = 98580.687500, hum = -1.000000[0m
+[0;32mI (145663) test: Read Values: temp = 28.219999, pres = 98580.226562, hum = -1.000000[0m
+[0;32mI (146663) test: Read Values: temp = 28.219999, pres = 98579.734375, hum = -1.000000[0m
+[0;32mI (147673) test: Read Values: temp = 28.219999, pres = 98579.218750, hum = -1.000000[0m
+[0;32mI (148683) test: Read Values: temp = 28.219999, pres = 98578.687500, hum = -1.000000[0m
+[0;32mI (149693) test: Read Values: temp = 28.199999, pres = 98576.375000, hum = -1.000000[0m
+[0;32mI (150693) test: Read Values: temp = 28.209999, pres = 98578.140625, hum = -1.000000[0m
+[0;32mI (151703) test: Read Values: temp = 28.219999, pres = 98576.984375, hum = -1.000000[0m
+[0;32mI (152713) test: Read Values: temp = 28.219999, pres = 98578.187500, hum = -1.000000[0m
+[0;32mI (153723) test: Read Values: temp = 28.209999, pres = 98577.648438, hum = -1.000000[0m
+[0;32mI (154723) test: Read Values: temp = 28.209999, pres = 98576.226562, hum = -1.000000[0m
+[0;32mI (155733) test: Read Values: temp = 28.209999, pres = 98575.718750, hum = -1.000000[0m
+[0;32mI (156743) test: Read Values: temp = 28.219999, pres = 98576.984375, hum = -1.000000[0m
+[0;32mI (157753) test: Read Values: temp = 28.209999, pres = 98576.453125, hum = -1.000000[0m
+[0;32mI (158753) test: Read Values: temp = 28.209999, pres = 98575.945312, hum = -1.000000[0m
+[0;32mI (159763) test: Read Values: temp = 28.230000, pres = 98578.062500, hum = -1.000000[0m
+[0;32mI (160773) test: Read Values: temp = 28.230000, pres = 98578.289062, hum = -1.000000[0m
+[0;32mI (161783) test: Read Values: temp = 28.230000, pres = 98578.265625, hum = -1.000000[0m
+[0;32mI (162783) test: Read Values: temp = 28.219999, pres = 98574.968750, hum = -1.000000[0m
+[0;32mI (163793) test: Read Values: temp = 28.230000, pres = 98576.062500, hum = -1.000000[0m
+[0;32mI (164803) test: Read Values: temp = 28.240000, pres = 98577.625000, hum = -1.000000[0m
+[0;32mI (165813) test: Read Values: temp = 28.230000, pres = 98575.671875, hum = -1.000000[0m
+[0;32mI (166823) test: Read Values: temp = 28.209999, pres = 98574.054688, hum = -1.000000[0m
+[0;32mI (167823) test: Read Values: temp = 28.230000, pres = 98576.718750, hum = -1.000000[0m
+[0;32mI (168833) test: Read Values: temp = 28.230000, pres = 98576.929688, hum = -1.000000[0m
+[0;32mI (169843) test: Read Values: temp = 28.219999, pres = 98575.976562, hum = -1.000000[0m
+[0;32mI (170853) test: Read Values: temp = 28.199999, pres = 98572.273438, hum = -1.000000[0m
+[0;32mI (171853) test: Read Values: temp = 28.230000, pres = 98575.335938, hum = -1.000000[0m
+[0;32mI (172863) test: Read Values: temp = 28.230000, pres = 98575.671875, hum = -1.000000[0m
+[0;32mI (173873) test: Read Values: temp = 28.209999, pres = 98574.242188, hum = -1.000000[0m
+[0;32mI (174883) test: Read Values: temp = 28.189999, pres = 98571.007812, hum = -1.000000[0m
+[0;32mI (175893) test: Read Values: temp = 28.219999, pres = 98575.453125, hum = -1.000000[0m
+[0;32mI (176893) test: Read Values: temp = 28.230000, pres = 98577.906250, hum = -1.000000[0m
+[0;32mI (177903) test: Read Values: temp = 28.219999, pres = 98575.296875, hum = -1.000000[0m
+[0;32mI (178913) test: Read Values: temp = 28.199999, pres = 98572.937500, hum = -1.000000[0m
+[0;32mI (179923) test: Read Values: temp = 28.209999, pres = 98575.078125, hum = -1.000000[0m
+[0;32mI (180923) test: Read Values: temp = 28.209999, pres = 98573.515625, hum = -1.000000[0m
+[0;32mI (181933) test: Read Values: temp = 28.199999, pres = 98573.937500, hum = -1.000000[0m
+[0;32mI (182943) test: Read Values: temp = 28.189999, pres = 98572.875000, hum = -1.000000[0m
+[0;32mI (183953) test: Read Values: temp = 28.209999, pres = 98576.250000, hum = -1.000000[0m
+[0;32mI (184953) test: Read Values: temp = 28.219999, pres = 98577.507812, hum = -1.000000[0m
+[0;32mI (185963) test: Read Values: temp = 28.209999, pres = 98574.187500, hum = -1.000000[0m
+[0;32mI (186973) test: Read Values: temp = 28.199999, pres = 98573.781250, hum = -1.000000[0m
+[0;32mI (187983) test: Read Values: temp = 28.209999, pres = 98575.773438, hum = -1.000000[0m
+[0;32mI (188993) test: Read Values: temp = 28.230000, pres = 98576.187500, hum = -1.000000[0m
+[0;32mI (189993) test: Read Values: temp = 28.219999, pres = 98575.796875, hum = -1.000000[0m
+[0;32mI (191003) test: Read Values: temp = 28.189999, pres = 98570.320312, hum = -1.000000[0m
+[0;32mI (192013) test: Read Values: temp = 28.209999, pres = 98573.898438, hum = -1.000000[0m
+[0;32mI (193023) test: Read Values: temp = 28.230000, pres = 98577.062500, hum = -1.000000[0m
+[0;32mI (194023) test: Read Values: temp = 28.209999, pres = 98574.750000, hum = -1.000000[0m
+[0;32mI (195033) test: Read Values: temp = 28.209999, pres = 98573.671875, hum = -1.000000[0m
+[0;32mI (196043) test: Read Values: temp = 28.209999, pres = 98573.562500, hum = -1.000000[0m
+[0;32mI (197053) test: Read Values: temp = 28.230000, pres = 98576.531250, hum = -1.000000[0m
+[0;32mI (198053) test: Read Values: temp = 28.209999, pres = 98574.750000, hum = -1.000000[0m
+[0;32mI (199063) test: Read Values: temp = 28.209999, pres = 98573.164062, hum = -1.000000[0m
+[0;32mI (200073) test: Read Values: temp = 28.199999, pres = 98572.101562, hum = -1.000000[0m
+[0;32mI (201083) test: Read Values: temp = 28.209999, pres = 98574.414062, hum = -1.000000[0m
+[0;32mI (202093) test: Read Values: temp = 28.209999, pres = 98574.078125, hum = -1.000000[0m
+[0;32mI (203093) test: Read Values: temp = 28.209999, pres = 98573.695312, hum = -1.000000[0m
+[0;32mI (204103) test: Read Values: temp = 28.209999, pres = 98572.992188, hum = -1.000000[0m
+[0;32mI (205113) test: Read Values: temp = 28.230000, pres = 98575.671875, hum = -1.000000[0m
+[0;32mI (206123) test: Read Values: temp = 28.219999, pres = 98573.765625, hum = -1.000000[0m
+[0;32mI (207123) test: Read Values: temp = 28.189999, pres = 98570.171875, hum = -1.000000[0m
+[0;32mI (208133) test: Read Values: temp = 28.219999, pres = 98574.453125, hum = -1.000000[0m
+[0;32mI (209143) test: Read Values: temp = 28.219999, pres = 98576.000000, hum = -1.000000[0m
+[0;32mI (210153) test: Read Values: temp = 28.219999, pres = 98575.984375, hum = -1.000000[0m
+[0;32mI (211163) test: Read Values: temp = 28.189999, pres = 98572.890625, hum = -1.000000[0m
+[0;32mI (212163) test: Read Values: temp = 28.219999, pres = 98576.835938, hum = -1.000000[0m
+[0;32mI (213173) test: Read Values: temp = 28.219999, pres = 98576.984375, hum = -1.000000[0m
+[0;32mI (214183) test: Read Values: temp = 28.209999, pres = 98575.562500, hum = -1.000000[0m
+[0;32mI (215193) test: Read Values: temp = 28.189999, pres = 98572.531250, hum = -1.000000[0m
+[0;32mI (216193) test: Read Values: temp = 28.199999, pres = 98575.507812, hum = -1.000000[0m
+[0;32mI (217203) test: Read Values: temp = 28.189999, pres = 98575.109375, hum = -1.000000[0m
+[0;32mI (218213) test: Read Values: temp = 28.180000, pres = 98575.171875, hum = -1.000000[0m
+[0;32mI (219223) test: Read Values: temp = 28.160000, pres = 98571.953125, hum = -1.000000[0m
+[0;32mI (220223) test: Read Values: temp = 28.180000, pres = 98572.953125, hum = -1.000000[0m
+[0;32mI (221233) test: Read Values: temp = 28.189999, pres = 98574.750000, hum = -1.000000[0m
+[0;32mI (222243) test: Read Values: temp = 28.189999, pres = 98573.726562, hum = -1.000000[0m
+[0;32mI (223253) test: Read Values: temp = 28.170000, pres = 98570.804688, hum = -1.000000[0m
+[0;32mI (224263) test: Read Values: temp = 28.180000, pres = 98573.335938, hum = -1.000000[0m
+[0;32mI (225263) test: Read Values: temp = 28.189999, pres = 98574.585938, hum = -1.000000[0m
+[0;32mI (226273) test: Read Values: temp = 28.180000, pres = 98571.250000, hum = -1.000000[0m
+[0;32mI (227283) test: Read Values: temp = 28.160000, pres = 98569.250000, hum = -1.000000[0m
+[0;32mI (228293) test: Read Values: temp = 28.150000, pres = 98568.687500, hum = -1.000000[0m
+[0;32mI (229293) test: Read Values: temp = 28.180000, pres = 98573.828125, hum = -1.000000[0m
+[0;32mI (230303) test: Read Values: temp = 28.189999, pres = 98575.593750, hum = -1.000000[0m
+[0;32mI (231313) test: Read Values: temp = 28.180000, pres = 98573.335938, hum = -1.000000[0m
+[0;32mI (232313) test: Read Values: temp = 28.170000, pres = 98573.421875, hum = -1.000000[0m
+[0;32mI (233323) test: Read Values: temp = 28.180000, pres = 98574.171875, hum = -1.000000[0m
+[0;32mI (234333) test: Read Values: temp = 28.189999, pres = 98575.257812, hum = -1.000000[0m
+[0;32mI (235343) test: Read Values: temp = 28.180000, pres = 98574.039062, hum = -1.000000[0m
+[0;32mI (236353) test: Read Values: temp = 28.160000, pres = 98569.742188, hum = -1.000000[0m
+[0;32mI (237353) test: Read Values: temp = 28.180000, pres = 98570.953125, hum = -1.000000[0m
+[0;32mI (238363) test: Read Values: temp = 28.199999, pres = 98572.937500, hum = -1.000000[0m
+[0;32mI (239373) test: Read Values: temp = 28.199999, pres = 98574.140625, hum = -1.000000[0m
+[0;32mI (240383) test: Read Values: temp = 28.170000, pres = 98570.351562, hum = -1.000000[0m
+[0;32mI (241383) test: Read Values: temp = 28.180000, pres = 98571.992188, hum = -1.000000[0m
+[0;32mI (242393) test: Read Values: temp = 28.199999, pres = 98573.593750, hum = -1.000000[0m
+[0;32mI (243403) test: Read Values: temp = 28.199999, pres = 98574.171875, hum = -1.000000[0m
+[0;32mI (244413) test: Read Values: temp = 28.180000, pres = 98570.609375, hum = -1.000000[0m
+[0;32mI (245413) test: Read Values: temp = 28.189999, pres = 98572.007812, hum = -1.000000[0m
+[0;32mI (246423) test: Read Values: temp = 28.189999, pres = 98571.328125, hum = -1.000000[0m
+[0;32mI (247433) test: Read Values: temp = 28.199999, pres = 98572.781250, hum = -1.000000[0m
+[0;32mI (248443) test: Read Values: temp = 28.189999, pres = 98570.984375, hum = -1.000000[0m
+[0;32mI (249443) test: Read Values: temp = 28.180000, pres = 98570.078125, hum = -1.000000[0m
+[0;32mI (250453) test: Read Values: temp = 28.189999, pres = 98570.984375, hum = -1.000000[0m
+[0;32mI (251463) test: Read Values: temp = 28.199999, pres = 98573.781250, hum = -1.000000[0m
+[0;32mI (252473) test: Read Values: temp = 28.160000, pres = 98567.187500, hum = -1.000000[0m
+[0;32mI (253473) test: Read Values: temp = 28.189999, pres = 98570.820312, hum = -1.000000[0m
+[0;32mI (254483) test: Read Values: temp = 28.199999, pres = 98572.765625, hum = -1.000000[0m
+[0;32mI (255493) test: Read Values: temp = 28.209999, pres = 98573.695312, hum = -1.000000[0m
+[0;32mI (256503) test: Read Values: temp = 28.199999, pres = 98571.250000, hum = -1.000000[0m
+[0;32mI (257503) test: Read Values: temp = 28.180000, pres = 98568.359375, hum = -1.000000[0m
+[0;32mI (258513) test: Read Values: temp = 28.199999, pres = 98571.406250, hum = -1.000000[0m
+[0;32mI (259563) test: Read Values: temp = 28.219999, pres = 98574.773438, hum = -1.000000[0m
+[0;32mI (260563) test: Read Values: temp = 28.209999, pres = 98574.078125, hum = -1.000000[0m
+[0;32mI (261573) test: Read Values: temp = 28.199999, pres = 98572.273438, hum = -1.000000[0m
+[0;32mI (262583) test: Read Values: temp = 28.199999, pres = 98572.421875, hum = -1.000000[0m
+[0;32mI (263593) test: Read Values: temp = 28.209999, pres = 98574.718750, hum = -1.000000[0m
+[0;32mI (264603) test: Read Values: temp = 28.199999, pres = 98573.609375, hum = -1.000000[0m
+[0;32mI (265603) test: Read Values: temp = 28.170000, pres = 98569.101562, hum = -1.000000[0m
+[0;32mI (266613) test: Read Values: temp = 28.170000, pres = 98570.328125, hum = -1.000000[0m
+[0;32mI (267623) test: Read Values: temp = 28.180000, pres = 98573.171875, hum = -1.000000[0m
+[0;32mI (268633) test: Read Values: temp = 28.170000, pres = 98572.718750, hum = -1.000000[0m
+[0;32mI (269633) test: Read Values: temp = 28.139999, pres = 98572.343750, hum = -1.000000[0m
+[0;32mI (270643) test: Read Values: temp = 28.129999, pres = 98572.757812, hum = -1.000000[0m
+[0;32mI (271653) test: Read Values: temp = 28.119999, pres = 98573.890625, hum = -1.000000[0m
+[0;32mI (272663) test: Read Values: temp = 28.109999, pres = 98572.625000, hum = -1.000000[0m
+[0;32mI (273663) test: Read Values: temp = 28.090000, pres = 98571.664062, hum = -1.000000[0m
+[0;32mI (274673) test: Read Values: temp = 28.080000, pres = 98570.210938, hum = -1.000000[0m
+[0;32mI (275683) test: Read Values: temp = 28.090000, pres = 98569.453125, hum = -1.000000[0m
+[0;32mI (276693) test: Read Values: temp = 28.099998, pres = 98570.359375, hum = -1.000000[0m
+[0;32mI (277693) test: Read Values: temp = 28.090000, pres = 98568.765625, hum = -1.000000[0m
+[0;32mI (278703) test: Read Values: temp = 28.070000, pres = 98565.507812, hum = -1.000000[0m
+[0;32mI (279713) test: Read Values: temp = 28.080000, pres = 98568.468750, hum = -1.000000[0m
+[0;32mI (280753) test: Read Values: temp = 28.099998, pres = 98571.718750, hum = -1.000000[0m
+[0;32mI (281763) test: Read Values: temp = 28.109999, pres = 98572.265625, hum = -1.000000[0m
+[0;32mI (282773) test: Read Values: temp = 28.099998, pres = 98569.843750, hum = -1.000000[0m
+[0;32mI (283783) test: Read Values: temp = 28.099998, pres = 98567.953125, hum = -1.000000[0m
+[0;32mI (284783) test: Read Values: temp = 28.109999, pres = 98569.046875, hum = -1.000000[0m
+[0;32mI (285793) test: Read Values: temp = 28.109999, pres = 98570.281250, hum = -1.000000[0m
+[0;32mI (286803) test: Read Values: temp = 28.090000, pres = 98566.750000, hum = -1.000000[0m
+[0;32mI (287813) test: Read Values: temp = 28.099998, pres = 98567.460938, hum = -1.000000[0m
+[0;32mI (288813) test: Read Values: temp = 28.109999, pres = 98567.500000, hum = -1.000000[0m
+[0;32mI (289823) test: Read Values: temp = 28.119999, pres = 98569.484375, hum = -1.000000[0m
+[0;32mI (290833) test: Read Values: temp = 28.129999, pres = 98570.546875, hum = -1.000000[0m
+[0;32mI (291843) test: Read Values: temp = 28.119999, pres = 98569.789062, hum = -1.000000[0m
+[0;32mI (292853) test: Read Values: temp = 28.129999, pres = 98570.562500, hum = -1.000000[0m
+[0;32mI (293853) test: Read Values: temp = 28.139999, pres = 98573.000000, hum = -1.000000[0m
+[0;32mI (294863) test: Read Values: temp = 28.119999, pres = 98570.531250, hum = -1.000000[0m
+[0;32mI (295873) test: Read Values: temp = 28.119999, pres = 98569.335938, hum = -1.000000[0m
+[0;32mI (296883) test: Read Values: temp = 28.129999, pres = 98570.039062, hum = -1.000000[0m
+[0;32mI (297883) test: Read Values: temp = 28.139999, pres = 98572.359375, hum = -1.000000[0m
+[0;32mI (298893) test: Read Values: temp = 28.139999, pres = 98569.609375, hum = -1.000000[0m
+[0;32mI (299903) test: Read Values: temp = 28.119999, pres = 98565.703125, hum = -1.000000[0m
+[0;32mI (300913) test: Read Values: temp = 28.139999, pres = 98569.281250, hum = -1.000000[0m
+[0;32mI (301953) test: Read Values: temp = 28.160000, pres = 98571.109375, hum = -1.000000[0m
+[0;32mI (302963) test: Read Values: temp = 28.160000, pres = 98570.578125, hum = -1.000000[0m
+[0;32mI (303973) test: Read Values: temp = 28.129999, pres = 98567.664062, hum = -1.000000[0m
+[0;32mI (304973) test: Read Values: temp = 28.139999, pres = 98568.914062, hum = -1.000000[0m
+[0;32mI (305983) test: Read Values: temp = 28.150000, pres = 98569.695312, hum = -1.000000[0m
+[0;32mI (306993) test: Read Values: temp = 28.150000, pres = 98570.546875, hum = -1.000000[0m
+[0;32mI (308003) test: Read Values: temp = 28.129999, pres = 98566.968750, hum = -1.000000[0m
+[0;32mI (309003) test: Read Values: temp = 28.129999, pres = 98567.320312, hum = -1.000000[0m
+[0;32mI (310013) test: Read Values: temp = 28.129999, pres = 98567.820312, hum = -1.000000[0m
+[0;32mI (311023) test: Read Values: temp = 28.139999, pres = 98569.750000, hum = -1.000000[0m
+[0;32mI (312033) test: Read Values: temp = 28.119999, pres = 98568.296875, hum = -1.000000[0m
+[0;32mI (313033) test: Read Values: temp = 28.119999, pres = 98568.125000, hum = -1.000000[0m
+[0;32mI (314043) test: Read Values: temp = 28.139999, pres = 98568.890625, hum = -1.000000[0m
+[0;32mI (315053) test: Read Values: temp = 28.139999, pres = 98569.125000, hum = -1.000000[0m
+[0;32mI (316063) test: Read Values: temp = 28.129999, pres = 98567.671875, hum = -1.000000[0m
+[0;32mI (317073) test: Read Values: temp = 28.119999, pres = 98567.796875, hum = -1.000000[0m
+[0;32mI (318073) test: Read Values: temp = 28.119999, pres = 98566.250000, hum = -1.000000[0m
+[0;32mI (319083) test: Read Values: temp = 28.139999, pres = 98569.468750, hum = -1.000000[0m
+[0;32mI (320093) test: Read Values: temp = 28.150000, pres = 98570.671875, hum = -1.000000[0m
+[0;32mI (321103) test: Read Values: temp = 28.119999, pres = 98565.546875, hum = -1.000000[0m
+[0;32mI (322103) test: Read Values: temp = 28.139999, pres = 98569.125000, hum = -1.000000[0m
+[0;32mI (323113) test: Read Values: temp = 28.150000, pres = 98570.171875, hum = -1.000000[0m
+[0;32mI (324123) test: Read Values: temp = 28.129999, pres = 98567.851562, hum = -1.000000[0m
+[0;32mI (325133) test: Read Values: temp = 28.129999, pres = 98567.343750, hum = -1.000000[0m
+[0;32mI (326143) test: Read Values: temp = 28.139999, pres = 98566.843750, hum = -1.000000[0m
+[0;32mI (327143) test: Read Values: temp = 28.150000, pres = 98567.093750, hum = -1.000000[0m
+[0;32mI (328153) test: Read Values: temp = 28.150000, pres = 98566.929688, hum = -1.000000[0m
+[0;32mI (329163) test: Read Values: temp = 28.139999, pres = 98566.679688, hum = -1.000000[0m
+[0;32mI (330173) test: Read Values: temp = 28.160000, pres = 98569.414062, hum = -1.000000[0m
+[0;32mI (331173) test: Read Values: temp = 28.160000, pres = 98569.414062, hum = -1.000000[0m
+[0;32mI (332183) test: Read Values: temp = 28.150000, pres = 98569.203125, hum = -1.000000[0m
+[0;32mI (333193) test: Read Values: temp = 28.139999, pres = 98567.703125, hum = -1.000000[0m
+[0;32mI (334233) test: Read Values: temp = 28.150000, pres = 98568.687500, hum = -1.000000[0m
+[0;32mI (335243) test: Read Values: temp = 28.160000, pres = 98570.593750, hum = -1.000000[0m
+[0;32mI (336253) test: Read Values: temp = 28.139999, pres = 98565.312500, hum = -1.000000[0m
+[0;32mI (337263) test: Read Values: temp = 28.139999, pres = 98566.343750, hum = -1.000000[0m
+[0;32mI (338273) test: Read Values: temp = 28.160000, pres = 98568.375000, hum = -1.000000[0m
+[0;32mI (339273) test: Read Values: temp = 28.160000, pres = 98568.718750, hum = -1.000000[0m
+[0;32mI (340283) test: Read Values: temp = 28.139999, pres = 98566.000000, hum = -1.000000[0m
+[0;32mI (341293) test: Read Values: temp = 28.160000, pres = 98569.046875, hum = -1.000000[0m
+[0;32mI (342303) test: Read Values: temp = 28.170000, pres = 98570.500000, hum = -1.000000[0m
+[0;32mI (343313) test: Read Values: temp = 28.160000, pres = 98568.914062, hum = -1.000000[0m
+[0;32mI (344313) test: Read Values: temp = 28.150000, pres = 98567.796875, hum = -1.000000[0m
+[0;32mI (345323) test: Read Values: temp = 28.170000, pres = 98570.500000, hum = -1.000000[0m
+[0;32mI (346333) test: Read Values: temp = 28.170000, pres = 98568.781250, hum = -1.000000[0m
+[0;32mI (347343) test: Read Values: temp = 28.150000, pres = 98566.476562, hum = -1.000000[0m
+[0;32mI (348343) test: Read Values: temp = 28.150000, pres = 98566.796875, hum = -1.000000[0m
+[0;32mI (349353) test: Read Values: temp = 28.170000, pres = 98569.296875, hum = -1.000000[0m
+[0;32mI (350363) test: Read Values: temp = 28.150000, pres = 98566.992188, hum = -1.000000[0m
+[0;32mI (351413) test: Read Values: temp = 28.109999, pres = 98562.781250, hum = -1.000000[0m
+[0;32mI (352413) test: Read Values: temp = 28.139999, pres = 98566.679688, hum = -1.000000[0m
+[0;32mI (353423) test: Read Values: temp = 28.160000, pres = 98569.750000, hum = -1.000000[0m
+[0;32mI (354433) test: Read Values: temp = 28.150000, pres = 98569.164062, hum = -1.000000[0m
+[0;32mI (355443) test: Read Values: temp = 28.119999, pres = 98565.718750, hum = -1.000000[0m
+[0;32mI (356453) test: Read Values: temp = 28.119999, pres = 98569.164062, hum = -1.000000[0m
+[0;32mI (357453) test: Read Values: temp = 28.129999, pres = 98568.703125, hum = -1.000000[0m
+[0;32mI (358463) test: Read Values: temp = 28.119999, pres = 98565.375000, hum = -1.000000[0m
+[0;32mI (359473) test: Read Values: temp = 28.119999, pres = 98566.718750, hum = -1.000000[0m
+[0;32mI (360483) test: Read Values: temp = 28.129999, pres = 98568.531250, hum = -1.000000[0m
+[0;32mI (361483) test: Read Values: temp = 28.129999, pres = 98570.062500, hum = -1.000000[0m
+[0;32mI (362493) test: Read Values: temp = 28.119999, pres = 98566.953125, hum = -1.000000[0m
+[0;32mI (363503) test: Read Values: temp = 28.119999, pres = 98566.781250, hum = -1.000000[0m
+[0;32mI (364513) test: Read Values: temp = 28.139999, pres = 98569.468750, hum = -1.000000[0m
+[0;32mI (365523) test: Read Values: temp = 28.139999, pres = 98567.046875, hum = -1.000000[0m
+[0;32mI (366523) test: Read Values: temp = 28.139999, pres = 98565.695312, hum = -1.000000[0m
+[0;32mI (367533) test: Read Values: temp = 28.139999, pres = 98566.062500, hum = -1.000000[0m
+[0;32mI (368543) test: Read Values: temp = 28.160000, pres = 98567.531250, hum = -1.000000[0m
+[0;32mI (369583) test: Read Values: temp = 28.170000, pres = 98568.437500, hum = -1.000000[0m
+[0;32mI (370593) test: Read Values: temp = 28.150000, pres = 98563.187500, hum = -1.000000[0m
+[0;32mI (371603) test: Read Values: temp = 28.170000, pres = 98567.093750, hum = -1.000000[0m
+[0;32mI (372613) test: Read Values: temp = 28.189999, pres = 98569.625000, hum = -1.000000[0m
+[0;32mI (373623) test: Read Values: temp = 28.180000, pres = 98567.718750, hum = -1.000000[0m
+[0;32mI (374623) test: Read Values: temp = 28.160000, pres = 98563.468750, hum = -1.000000[0m
+[0;32mI (375633) test: Read Values: temp = 28.199999, pres = 98567.140625, hum = -1.000000[0m
+[0;32mI (376643) test: Read Values: temp = 28.209999, pres = 98567.390625, hum = -1.000000[0m
+[0;32mI (377653) test: Read Values: temp = 28.209999, pres = 98566.859375, hum = -1.000000[0m
+[0;32mI (378663) test: Read Values: temp = 28.189999, pres = 98564.546875, hum = -1.000000[0m
+[0;32mI (379663) test: Read Values: temp = 28.230000, pres = 98569.031250, hum = -1.000000[0m
+[0;32mI (380673) test: Read Values: temp = 28.230000, pres = 98567.343750, hum = -1.000000[0m
+[0;32mI (381683) test: Read Values: temp = 28.219999, pres = 98566.453125, hum = -1.000000[0m
+[0;32mI (382693) test: Read Values: temp = 28.199999, pres = 98563.265625, hum = -1.000000[0m
+[0;32mI (383693) test: Read Values: temp = 28.230000, pres = 98567.390625, hum = -1.000000[0m
+[0;32mI (384703) test: Read Values: temp = 28.230000, pres = 98566.515625, hum = -1.000000[0m
+[0;32mI (385713) test: Read Values: temp = 28.189999, pres = 98562.335938, hum = -1.000000[0m
+[0;32mI (386723) test: Read Values: temp = 28.219999, pres = 98566.609375, hum = -1.000000[0m
+[0;32mI (387733) test: Read Values: temp = 28.230000, pres = 98569.414062, hum = -1.000000[0m
+[0;32mI (388733) test: Read Values: temp = 28.230000, pres = 98567.031250, hum = -1.000000[0m
+[0;32mI (389743) test: Read Values: temp = 28.219999, pres = 98564.210938, hum = -1.000000[0m
+[0;32mI (390753) test: Read Values: temp = 28.230000, pres = 98565.281250, hum = -1.000000[0m
+[0;32mI (391763) test: Read Values: temp = 28.230000, pres = 98566.171875, hum = -1.000000[0m
+[0;32mI (392773) test: Read Values: temp = 28.219999, pres = 98564.054688, hum = -1.000000[0m
+[0;32mI (393773) test: Read Values: temp = 28.209999, pres = 98563.000000, hum = -1.000000[0m
+[0;32mI (394783) test: Read Values: temp = 28.219999, pres = 98565.585938, hum = -1.000000[0m
+[0;32mI (395793) test: Read Values: temp = 28.219999, pres = 98565.937500, hum = -1.000000[0m
+[0;32mI (396803) test: Read Values: temp = 28.209999, pres = 98563.687500, hum = -1.000000[0m
+[0;32mI (397803) test: Read Values: temp = 28.209999, pres = 98563.476562, hum = -1.000000[0m
+[0;32mI (398813) test: Read Values: temp = 28.230000, pres = 98566.515625, hum = -1.000000[0m
+[0;32mI (399823) test: Read Values: temp = 28.219999, pres = 98564.757812, hum = -1.000000[0m
+[0;32mI (400833) test: Read Values: temp = 28.219999, pres = 98563.546875, hum = -1.000000[0m
+[0;32mI (401843) test: Read Values: temp = 28.230000, pres = 98564.609375, hum = -1.000000[0m
+[0;32mI (402843) test: Read Values: temp = 28.250000, pres = 98566.656250, hum = -1.000000[0m
+[0;32mI (403853) test: Read Values: temp = 28.250000, pres = 98567.171875, hum = -1.000000[0m
+[0;32mI (404863) test: Read Values: temp = 28.219999, pres = 98560.640625, hum = -1.000000[0m
+[0;32mI (405873) test: Read Values: temp = 28.250000, pres = 98564.609375, hum = -1.000000[0m
+[0;32mI (406873) test: Read Values: temp = 28.269999, pres = 98566.593750, hum = -1.000000[0m
+[0;32mI (407883) test: Read Values: temp = 28.260000, pres = 98563.789062, hum = -1.000000[0m
+[0;32mI (408893) test: Read Values: temp = 28.240000, pres = 98560.421875, hum = -1.000000[0m
+[0;32mI (409903) test: Read Values: temp = 28.260000, pres = 98563.445312, hum = -1.000000[0m
+[0;32mI (410913) test: Read Values: temp = 28.279999, pres = 98565.507812, hum = -1.000000[0m
+[0;32mI (411913) test: Read Values: temp = 28.279999, pres = 98566.875000, hum = -1.000000[0m
+[0;32mI (412923) test: Read Values: temp = 28.250000, pres = 98563.062500, hum = -1.000000[0m
+[0;32mI (413933) test: Read Values: temp = 28.279999, pres = 98566.335938, hum = -1.000000[0m
+[0;32mI (414943) test: Read Values: temp = 28.279999, pres = 98565.343750, hum = -1.000000[0m
+[0;32mI (415943) test: Read Values: temp = 28.279999, pres = 98563.812500, hum = -1.000000[0m
+[0;32mI (416953) test: Read Values: temp = 28.269999, pres = 98562.890625, hum = -1.000000[0m
+[0;32mI (417963) test: Read Values: temp = 28.289999, pres = 98566.234375, hum = -1.000000[0m
+[0;32mI (418973) test: Read Values: temp = 28.289999, pres = 98566.593750, hum = -1.000000[0m
+[0;32mI (419983) test: Read Values: temp = 28.289999, pres = 98566.789062, hum = -1.000000[0m
+[0;32mI (420983) test: Read Values: temp = 28.269999, pres = 98563.765625, hum = -1.000000[0m
+[0;32mI (421993) test: Read Values: temp = 28.289999, pres = 98566.953125, hum = -1.000000[0m
+[0;32mI (423003) test: Read Values: temp = 28.299999, pres = 98567.335938, hum = -1.000000[0m
+[0;32mI (424013) test: Read Values: temp = 28.250000, pres = 98559.492188, hum = -1.000000[0m
+[0;32mI (425023) test: Read Values: temp = 28.279999, pres = 98562.437500, hum = -1.000000[0m
+[0;32mI (426063) test: Read Values: temp = 28.299999, pres = 98565.484375, hum = -1.000000[0m
+[0;32mI (427073) test: Read Values: temp = 28.299999, pres = 98565.460938, hum = -1.000000[0m
+[0;32mI (428083) test: Read Values: temp = 28.269999, pres = 98561.031250, hum = -1.000000[0m
+[0;32mI (429083) test: Read Values: temp = 28.279999, pres = 98561.257812, hum = -1.000000[0m
+[0;32mI (430093) test: Read Values: temp = 28.309999, pres = 98563.984375, hum = -1.000000[0m
+[0;32mI (431103) test: Read Values: temp = 28.289999, pres = 98564.382812, hum = -1.000000[0m
+[0;32mI (432113) test: Read Values: temp = 28.279999, pres = 98562.265625, hum = -1.000000[0m
+[0;32mI (433113) test: Read Values: temp = 28.279999, pres = 98561.765625, hum = -1.000000[0m
+[0;32mI (434123) test: Read Values: temp = 28.320000, pres = 98567.000000, hum = -1.000000[0m
+[0;32mI (435133) test: Read Values: temp = 28.320000, pres = 98564.078125, hum = -1.000000[0m
+[0;32mI (436143) test: Read Values: temp = 28.279999, pres = 98558.195312, hum = -1.000000[0m
+[0;32mI (437153) test: Read Values: temp = 28.299999, pres = 98563.117188, hum = -1.000000[0m
+[0;32mI (438153) test: Read Values: temp = 28.330000, pres = 98566.328125, hum = -1.000000[0m
+[0;32mI (439163) test: Read Values: temp = 28.299999, pres = 98563.117188, hum = -1.000000[0m
+[0;32mI (440173) test: Read Values: temp = 28.299999, pres = 98560.859375, hum = -1.000000[0m
+[0;32mI (441183) test: Read Values: temp = 28.299999, pres = 98563.625000, hum = -1.000000[0m
+[0;32mI (442183) test: Read Values: temp = 28.309999, pres = 98564.875000, hum = -1.000000[0m
+[0;32mI (443193) test: Read Values: temp = 28.269999, pres = 98560.015625, hum = -1.000000[0m
+[0;32mI (444203) test: Read Values: temp = 28.279999, pres = 98562.250000, hum = -1.000000[0m
+[0;32mI (445213) test: Read Values: temp = 28.299999, pres = 98565.656250, hum = -1.000000[0m
+[0;32mI (446223) test: Read Values: temp = 28.309999, pres = 98566.070312, hum = -1.000000[0m
+[0;32mI (447263) test: Read Values: temp = 28.269999, pres = 98559.281250, hum = -1.000000[0m
+[0;32mI (448273) test: Read Values: temp = 28.289999, pres = 98562.507812, hum = -1.000000[0m
+[0;32mI (449283) test: Read Values: temp = 28.299999, pres = 98566.015625, hum = -1.000000[0m
+[0;32mI (450293) test: Read Values: temp = 28.309999, pres = 98565.882812, hum = -1.000000[0m
+[0;32mI (451293) test: Read Values: temp = 28.279999, pres = 98561.562500, hum = -1.000000[0m
+[0;32mI (452303) test: Read Values: temp = 28.289999, pres = 98562.492188, hum = -1.000000[0m
+[0;32mI (453313) test: Read Values: temp = 28.309999, pres = 98563.671875, hum = -1.000000[0m
+[0;32mI (454323) test: Read Values: temp = 28.289999, pres = 98560.781250, hum = -1.000000[0m
+[0;32mI (455323) test: Read Values: temp = 28.279999, pres = 98561.093750, hum = -1.000000[0m
+[0;32mI (456333) test: Read Values: temp = 28.299999, pres = 98563.593750, hum = -1.000000[0m
+[0;32mI (457343) test: Read Values: temp = 28.309999, pres = 98565.046875, hum = -1.000000[0m
+[0;32mI (458353) test: Read Values: temp = 28.309999, pres = 98564.171875, hum = -1.000000[0m
+[0;32mI (459353) test: Read Values: temp = 28.299999, pres = 98563.609375, hum = -1.000000[0m
+[0;32mI (460363) test: Read Values: temp = 28.309999, pres = 98563.812500, hum = -1.000000[0m
+[0;32mI (461373) test: Read Values: temp = 28.330000, pres = 98565.835938, hum = -1.000000[0m
+[0;32mI (462383) test: Read Values: temp = 28.330000, pres = 98564.796875, hum = -1.000000[0m
+[0;32mI (463383) test: Read Values: temp = 28.309999, pres = 98563.328125, hum = -1.000000[0m
+[0;32mI (464393) test: Read Values: temp = 28.299999, pres = 98562.718750, hum = -1.000000[0m
+[0;32mI (465403) test: Read Values: temp = 28.320000, pres = 98565.593750, hum = -1.000000[0m
+[0;32mI (466413) test: Read Values: temp = 28.309999, pres = 98565.203125, hum = -1.000000[0m
+[0;32mI (467423) test: Read Values: temp = 28.299999, pres = 98561.890625, hum = -1.000000[0m
+[0;32mI (468423) test: Read Values: temp = 28.299999, pres = 98561.375000, hum = -1.000000[0m
+[0;32mI (469433) test: Read Values: temp = 28.320000, pres = 98563.695312, hum = -1.000000[0m
+[0;32mI (470443) test: Read Values: temp = 28.320000, pres = 98563.546875, hum = -1.000000[0m
+[0;32mI (471453) test: Read Values: temp = 28.289999, pres = 98560.109375, hum = -1.000000[0m
+[0;32mI (472453) test: Read Values: temp = 28.279999, pres = 98558.859375, hum = -1.000000[0m
+[0;32mI (473463) test: Read Values: temp = 28.299999, pres = 98562.546875, hum = -1.000000[0m
+[0;32mI (474473) test: Read Values: temp = 28.299999, pres = 98562.890625, hum = -1.000000[0m
+[0;32mI (475483) test: Read Values: temp = 28.279999, pres = 98560.562500, hum = -1.000000[0m
+[0;32mI (476493) test: Read Values: temp = 28.279999, pres = 98559.867188, hum = -1.000000[0m
+[0;32mI (477493) test: Read Values: temp = 28.299999, pres = 98562.250000, hum = -1.000000[0m
+[0;32mI (478503) test: Read Values: temp = 28.299999, pres = 98562.718750, hum = -1.000000[0m
+[0;32mI (479513) test: Read Values: temp = 28.269999, pres = 98559.500000, hum = -1.000000[0m
+[0;32mI (480523) test: Read Values: temp = 28.299999, pres = 98563.265625, hum = -1.000000[0m
+[0;32mI (481533) test: Read Values: temp = 28.309999, pres = 98564.187500, hum = -1.000000[0m
+[0;32mI (482533) test: Read Values: temp = 28.299999, pres = 98562.781250, hum = -1.000000[0m
+[0;32mI (483543) test: Read Values: temp = 28.269999, pres = 98559.335938, hum = -1.000000[0m
+[0;32mI (484553) test: Read Values: temp = 28.299999, pres = 98562.031250, hum = -1.000000[0m
+[0;32mI (485563) test: Read Values: temp = 28.309999, pres = 98562.625000, hum = -1.000000[0m
+[0;32mI (486563) test: Read Values: temp = 28.289999, pres = 98561.125000, hum = -1.000000[0m
+[0;32mI (487573) test: Read Values: temp = 28.279999, pres = 98558.500000, hum = -1.000000[0m
+[0;32mI (488583) test: Read Values: temp = 28.309999, pres = 98561.937500, hum = -1.000000[0m
+[0;32mI (489593) test: Read Values: temp = 28.299999, pres = 98560.718750, hum = -1.000000[0m
+[0;32mI (490603) test: Read Values: temp = 28.309999, pres = 98560.078125, hum = -1.000000[0m
+[0;32mI (491603) test: Read Values: temp = 28.289999, pres = 98559.914062, hum = -1.000000[0m
+[0;32mI (492613) test: Read Values: temp = 28.309999, pres = 98562.968750, hum = -1.000000[0m
+[0;32mI (493623) test: Read Values: temp = 28.299999, pres = 98562.609375, hum = -1.000000[0m
+[0;32mI (494633) test: Read Values: temp = 28.299999, pres = 98561.390625, hum = -1.000000[0m
+[0;32mI (495643) test: Read Values: temp = 28.299999, pres = 98560.390625, hum = -1.000000[0m
+[0;32mI (496643) test: Read Values: temp = 28.309999, pres = 98559.929688, hum = -1.000000[0m
+[0;32mI (497653) test: Read Values: temp = 28.320000, pres = 98561.179688, hum = -1.000000[0m
+[0;32mI (498663) test: Read Values: temp = 28.279999, pres = 98554.750000, hum = -1.000000[0m
+[0;32mI (499673) test: Read Values: temp = 28.320000, pres = 98560.156250, hum = -1.000000[0m
+[0;32mI (500673) test: Read Values: temp = 28.330000, pres = 98560.390625, hum = -1.000000[0m
+[0;32mI (501683) test: Read Values: temp = 28.309999, pres = 98558.578125, hum = -1.000000[0m
+[0;32mI (502693) test: Read Values: temp = 28.299999, pres = 98556.437500, hum = -1.000000[0m
+[0;32mI (503703) test: Read Values: temp = 28.330000, pres = 98560.554688, hum = -1.000000[0m
+[0;32mI (504713) test: Read Values: temp = 28.340000, pres = 98560.468750, hum = -1.000000[0m
+[0;32mI (505713) test: Read Values: temp = 28.320000, pres = 98557.414062, hum = -1.000000[0m
+[0;32mI (506723) test: Read Values: temp = 28.309999, pres = 98556.531250, hum = -1.000000[0m
+[0;32mI (507733) test: Read Values: temp = 28.349998, pres = 98560.859375, hum = -1.000000[0m
+[0;32mI (508743) test: Read Values: temp = 28.340000, pres = 98558.953125, hum = -1.000000[0m
+[0;32mI (509753) test: Read Values: temp = 28.330000, pres = 98556.984375, hum = -1.000000[0m
+[0;32mI (510753) test: Read Values: temp = 28.330000, pres = 98558.718750, hum = -1.000000[0m
+[0;32mI (511763) test: Read Values: temp = 28.349998, pres = 98560.750000, hum = -1.000000[0m
+[0;32mI (512773) test: Read Values: temp = 28.359999, pres = 98560.789062, hum = -1.000000[0m
+[0;32mI (513783) test: Read Values: temp = 28.359999, pres = 98561.679688, hum = -1.000000[0m
+[0;32mI (514783) test: Read Values: temp = 28.369999, pres = 98561.890625, hum = -1.000000[0m
+[0;32mI (515793) test: Read Values: temp = 28.369999, pres = 98561.531250, hum = -1.000000[0m
+[0;32mI (516803) test: Read Values: temp = 28.369999, pres = 98560.171875, hum = -1.000000[0m
+[0;32mI (517813) test: Read Values: temp = 28.359999, pres = 98561.343750, hum = -1.000000[0m
+[0;32mI (518823) test: Read Values: temp = 28.359999, pres = 98561.656250, hum = -1.000000[0m
+[0;32mI (519823) test: Read Values: temp = 28.359999, pres = 98561.515625, hum = -1.000000[0m
+[0;32mI (520833) test: Read Values: temp = 28.359999, pres = 98560.320312, hum = -1.000000[0m
+[0;32mI (521843) test: Read Values: temp = 28.369999, pres = 98560.343750, hum = -1.000000[0m
+[0;32mI (522853) test: Read Values: temp = 28.369999, pres = 98561.015625, hum = -1.000000[0m
+[0;32mI (523863) test: Read Values: temp = 28.369999, pres = 98559.312500, hum = -1.000000[0m
+[0;32mI (524863) test: Read Values: temp = 28.369999, pres = 98560.343750, hum = -1.000000[0m
+[0;32mI (525873) test: Read Values: temp = 28.359999, pres = 98559.804688, hum = -1.000000[0m
+[0;32mI (526883) test: Read Values: temp = 28.369999, pres = 98560.171875, hum = -1.000000[0m
+[0;32mI (527893) test: Read Values: temp = 28.340000, pres = 98556.898438, hum = -1.000000[0m
+[0;32mI (528903) test: Read Values: temp = 28.349998, pres = 98558.453125, hum = -1.000000[0m
+[0;32mI (529903) test: Read Values: temp = 28.359999, pres = 98560.281250, hum = -1.000000[0m
+[0;32mI (530913) test: Read Values: temp = 28.349998, pres = 98558.984375, hum = -1.000000[0m
+[0;32mI (531923) test: Read Values: temp = 28.320000, pres = 98556.031250, hum = -1.000000[0m
+[0;32mI (532933) test: Read Values: temp = 28.299999, pres = 98554.031250, hum = -1.000000[0m
+[0;32mI (533933) test: Read Values: temp = 28.330000, pres = 98559.914062, hum = -1.000000[0m
+[0;32mI (534943) test: Read Values: temp = 28.309999, pres = 98557.046875, hum = -1.000000[0m
+[0;32mI (535953) test: Read Values: temp = 28.299999, p
