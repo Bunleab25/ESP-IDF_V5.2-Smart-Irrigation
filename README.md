@@ -6,7 +6,7 @@
 ![Protocol](https://img.shields.io/badge/Protocol-MQTT-660066?style=flat-square&logo=mqtt&logoColor=white)
 ![IoT Platform](https://img.shields.io/badge/IoT%20Platform-ThingsBoard-305680?style=flat-square)
 
-[![LinkedIn Project Showcase](https://img.shields.io/badge/LinkedIn-Project%20Showcase-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://lnkd.in/p/g7FB93Z2)
+[![LinkedIn Project Showcase](https://img.shields.io/badge/LinkedIn-Project%20Showcase-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://lnkd.in/p/gKZ8XaRg)
 
 An **embedded IoT automation system** designed to improve irrigation management through real-time soil-moisture monitoring, environmental sensing, and automated pump control. Built on the ESP32 using the native ESP-IDF framework, the system integrates sensor acquisition, threshold-based control logic, MQTT telemetry, and remote supervision through ThingsBoard.
 
@@ -189,7 +189,7 @@ Press `Ctrl+]` to exit the serial monitor.
 
 Explore the project showcase for visual documentation and a demonstration of the system.
 
-[**View Project Showcase on LinkedIn →**](https://lnkd.in/p/g7FB93Z2)
+[**View Project Showcase on LinkedIn →**](https://lnkd.in/p/gKZ8XaRgM)
 
 ## Engineering Focus
 
