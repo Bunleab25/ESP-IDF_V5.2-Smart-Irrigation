@@ -1,132 +1,165 @@
-# Smart Irrigation System
+# Smart Irrigation System | ESP32 · ESP-IDF · MQTT · ThingsBoard
 
-![Version](https://img.shields.io/badge/VERSION-v1.0.0-2ECC71?style=for-the-badge&labelColor=555555)
-![Framework](https://img.shields.io/badge/ESP--IDF-v5.2.5-E67E22?style=for-the-badge&logo=espressif&logoColor=white&labelColor=555555)
-![Hardware](https://img.shields.io/badge/HARDWARE-ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white&labelColor=555555)
-![Protocol](https://img.shields.io/badge/COMMUNICATION-MQTT-305680?style=for-the-badge&logo=mqtt&logoColor=white&labelColor=555555)
-![Platform](https://img.shields.io/badge/IoT_PLATFORM-ThingsBoard-1D8FCE?style=for-the-badge&labelColor=555555)
+![Version](https://img.shields.io/badge/Version-1.0.0-2EA44F?style=flat-square)
+![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v5.2.5-E67E22?style=flat-square&logo=espressif&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
+![Protocol](https://img.shields.io/badge/Protocol-MQTT-660066?style=flat-square&logo=mqtt&logoColor=white)
+![IoT Platform](https://img.shields.io/badge/IoT%20Platform-ThingsBoard-305680?style=flat-square)
 
-[![LinkedIn Demo](https://img.shields.io/badge/LINKEDIN-VIEW_DEMO-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=555555)](https://lnkd.in/p/g7FB93Z2)
+[![LinkedIn Project Showcase](https://img.shields.io/badge/LinkedIn-Project%20Showcase-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://lnkd.in/p/g7FB93Z2)
 
-An embedded Internet of Things (IoT) project that automates plant irrigation using an **ESP32** programmed with the native **ESP-IDF v5.2.5** framework. The system monitors soil moisture and environmental conditions, controls a water pump based on configured moisture thresholds, and supports remote monitoring and manual control through MQTT and ThingsBoard.
+An **embedded IoT automation system** designed to improve irrigation management through real-time soil-moisture monitoring, environmental sensing, and automated pump control. Built on the ESP32 using the native ESP-IDF framework, the system integrates sensor acquisition, threshold-based control logic, MQTT telemetry, and remote supervision through ThingsBoard.
 
-## Overview
+---
 
-Conventional irrigation systems often depend on fixed schedules rather than actual soil conditions, potentially causing unnecessary water consumption or inconsistent watering.
+## Project Overview
 
-This project implements a sensor-driven irrigation system on the ESP32. Soil moisture readings inform the pump-control logic, while a BME280 sensor measures ambient temperature, relative humidity, and atmospheric pressure. The device publishes telemetry through MQTT, enabling remote monitoring and pump control through a ThingsBoard dashboard.
+Traditional irrigation methods often rely on fixed schedules or manual observation, which may result in inefficient water usage and inconsistent soil-moisture conditions.
 
-## Key Features
+This project explores a sensor-driven alternative by integrating embedded firmware, environmental instrumentation, and cloud-connected device management into a unified IoT workflow.
 
-- **Automated irrigation:** Controls a water pump through a relay according to configured soil-moisture thresholds.
-- **Environmental monitoring:** Measures temperature, relative humidity, and atmospheric pressure using a BME280 sensor.
-- **Native embedded firmware:** Developed using ESP-IDF v5.2.5 and FreeRTOS.
-- **MQTT communication:** Publishes sensor readings and device status to the IoT platform.
-- **Remote monitoring:** Supports real-time visualization and historical telemetry through ThingsBoard.
-- **Remote actuator control:** Supports manual pump control through ThingsBoard RPC when configured in the firmware.
-- **Wi-Fi connectivity:** Connects the ESP32 to the configured wireless network for cloud communication.
+The ESP32 acquires soil-moisture measurements and environmental data from a BME280 sensor. The firmware evaluates configured irrigation conditions and controls a water pump through a relay module. Meanwhile, MQTT communication enables telemetry delivery to ThingsBoard for remote visualization and, when configured, manual actuator control.
+
+The project emphasizes **embedded firmware engineering, hardware–software integration, IoT communication, and practical automation**.
+
+## System Capabilities
+
+- **Sensor-driven irrigation control** — Uses soil-moisture readings and configurable thresholds to determine irrigation requirements.
+- **Environmental data acquisition** — Measures ambient temperature, relative humidity, and atmospheric pressure using the BME280.
+- **Embedded firmware development** — Uses ESP-IDF v5.2.5 for native ESP32 application development.
+- **Real-time task management** — Uses FreeRTOS capabilities where implemented in the firmware.
+- **MQTT-based telemetry** — Transmits sensor measurements and device status to the IoT platform.
+- **Remote monitoring** — Presents sensor readings and historical data through ThingsBoard dashboards.
+- **Remote actuator interaction** — Supports remote pump commands through ThingsBoard RPC when configured.
+- **Physical actuation** — Interfaces with a relay-controlled water pump to execute irrigation operations.
 
 ## System Architecture
 
 ```text
-┌──────────────────────────────┐
-│         Sensors              │
-│ Soil Moisture + BME280       │
-└──────────────┬───────────────┘
-               │ Sensor Data
-               ▼
-┌──────────────────────────────┐
-│            ESP32             │
-│       ESP-IDF v5.2.5          │
-│   FreeRTOS + Control Logic   │
-└──────────┬───────────┬───────┘
-           │           │
-           │           ▼
-           │    ┌──────────────┐
-           │    │ Relay + Pump │
-           │    │  Irrigation  │
-           │    └──────────────┘
-           │
-           │ Wi-Fi / MQTT
-           ▼
-┌──────────────────────────────┐
-│         ThingsBoard          │
-│ Dashboard + Telemetry        │
-│ Remote Control (RPC)         │
-└──────────────────────────────┘
+┌─────────────────────────────────┐
+│       SENSING LAYER             │
+│                                 │
+│  Soil Moisture Sensor           │
+│  BME280 Environmental Sensor    │
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│       EMBEDDED CONTROL LAYER    │
+│                                 │
+│  ESP32 Microcontroller          │
+│  ESP-IDF v5.2.5                 │
+│  Sensor Acquisition             │
+│  Irrigation Control Logic       │
+│  Wi-Fi / MQTT Client            │
+└────────────┬──────────────┬─────┘
+             │              │
+             ▼              ▼
+┌────────────────────┐  ┌────────────────────┐
+│ ACTUATION LAYER    │  │ COMMUNICATION LAYER│
+│                    │  │                    │
+│ Relay Module       │  │ Wi-Fi              │
+│ Water Pump         │  │ MQTT               │
+└────────────────────┘  └──────────┬─────────┘
+                                   │
+                                   ▼
+                       ┌────────────────────┐
+                       │ IoT PLATFORM       │
+                       │                    │
+                       │ ThingsBoard        │
+                       │ Telemetry Dashboard│
+                       │ Remote Control     │
+                       └────────────────────┘
 ```
 
-## Hardware Components
+## Hardware Architecture
 
-| Component | Interface | Function |
+| Component | Interface | Engineering Function |
 |---|---|---|
-| ESP32 development board | GPIO, ADC, Wi-Fi | Executes firmware, reads sensors, and manages system communication. |
-| Soil moisture sensor | ADC / GPIO | Measures soil moisture for irrigation decisions. |
-| BME280 sensor | I²C / SPI | Measures temperature, relative humidity, and atmospheric pressure. |
-| Single-channel relay module | Digital GPIO | Switches the pump's power circuit. |
-| 5 V mini submersible pump | Relay-switched power | Delivers water during irrigation. |
-| Appropriate power supply | Power connections | Supplies the components according to their electrical requirements. |
+| ESP32 development board | GPIO, ADC, Wi-Fi | Embedded processing, sensor acquisition, control execution, and wireless communication |
+| Soil-moisture sensor | ADC / GPIO, depending on model | Soil-moisture measurement for irrigation decisions |
+| BME280 sensor | I²C / SPI | Environmental data acquisition |
+| Single-channel relay module | Digital GPIO | Electrical switching interface for the pump |
+| 5 V mini submersible pump | Relay-switched power circuit | Water delivery during irrigation |
+| Power supply | Component-specific connections | Supplies the system according to individual electrical requirements |
 
-> **Hardware safety:** Verify the pump's voltage and current requirements and the relay module's electrical compatibility. Do not power the pump directly from an ESP32 GPIO. Keep electrical connections protected from water.
+> **Electrical design:** Verify operating voltage, current requirements, relay compatibility, and power-supply ratings before connecting the hardware. Do not drive the pump directly from an ESP32 GPIO.
 
-## Software and IoT Stack
+## Software Architecture
 
-| Layer | Technology | Responsibility |
+| Layer | Technology | Purpose |
 |---|---|---|
-| Firmware framework | ESP-IDF v5.2.5 | Embedded application development and hardware integration. |
-| Real-time operating system | FreeRTOS | Task management and concurrent application execution. |
-| Sensor interfaces | ADC, GPIO, I²C / SPI | Sensor acquisition and hardware control. |
-| Wireless connectivity | Wi-Fi | Network connectivity. |
-| Messaging protocol | MQTT | Telemetry transmission and device communication. |
-| IoT platform | ThingsBoard | Dashboard visualization, telemetry storage, and remote interaction. |
-| Actuation | Relay + water pump | Physical irrigation control. |
+| Firmware framework | ESP-IDF v5.2.5 | Native embedded application development |
+| Real-time operating system | FreeRTOS | Task scheduling and concurrent execution, where implemented |
+| Peripheral interfaces | ADC, GPIO, I²C / SPI | Sensor acquisition and actuator control |
+| Network connectivity | Wi-Fi | Wireless device connectivity |
+| Messaging protocol | MQTT | Telemetry transport and device communication |
+| IoT platform | ThingsBoard | Telemetry visualization, historical monitoring, and remote interaction |
+| Physical actuation | Relay and water pump | Execution of irrigation commands |
 
-## Operational Workflow
+## Control and Data Flow
 
-1. **Sensor acquisition:** The ESP32 reads soil moisture and retrieves environmental measurements from the BME280.
-2. **Threshold evaluation:** The firmware compares soil moisture readings against a configured threshold.
-3. **Pump actuation:** When the irrigation conditions are satisfied, the ESP32 controls the relay to switch the pump.
-4. **Telemetry transmission:** Sensor measurements and device status are packaged into messages and published through MQTT.
-5. **Cloud visualization:** ThingsBoard receives telemetry and displays current readings and historical trends.
-6. **Remote control:** When RPC is implemented and configured, an operator can issue pump-control commands through ThingsBoard.
+**01 — Data acquisition**
 
-**Control note:** Soil-moisture thresholds, sensor calibration, sampling intervals, and pump safety limits should be configured for the specific hardware and growing conditions.
+The ESP32 reads soil-moisture measurements and collects environmental data from the BME280 at configured intervals.
 
-## Getting Started
+**02 — Irrigation decision**
+
+The firmware evaluates the soil-moisture readings against configured control thresholds to determine whether watering is required.
+
+**03 — Actuator execution**
+
+The ESP32 controls the relay interface to switch the pump according to the irrigation logic or an authorized remote command.
+
+**04 — Telemetry transmission**
+
+Sensor measurements and relevant device states are published through MQTT for delivery to the configured IoT platform.
+
+**05 — Remote supervision**
+
+ThingsBoard presents telemetry through dashboard widgets and historical charts. Remote pump control is available when the corresponding RPC functionality is implemented and configured.
+
+## Technology Stack
+
+- **Embedded systems:** ESP32, ESP-IDF v5.2.5, C/C++
+- **Real-time execution:** FreeRTOS
+- **Hardware interfaces:** ADC, GPIO, I²C / SPI
+- **Connectivity:** Wi-Fi, MQTT
+- **IoT monitoring:** ThingsBoard
+- **Actuation:** Relay-controlled water pump
+
+## Build and Deployment
 
 ### Prerequisites
 
-- ESP-IDF v5.2.5 installed and configured.
-- ESP32 development board.
-- Soil moisture sensor and BME280 sensor.
-- Relay module and compatible water pump.
-- Appropriate power supply and USB data cable.
-- ThingsBoard Cloud or a self-hosted ThingsBoard instance.
-- Provisioned ThingsBoard device credentials.
+- ESP-IDF v5.2.5 development environment
+- ESP32 development board
+- Compatible soil-moisture and BME280 sensors
+- Relay module and appropriately rated pump power supply
+- ThingsBoard instance and device credentials
+- USB data cable and serial-port access
 
 ### 1. Clone the Repository
-
-Replace the placeholders with your actual GitHub username and repository name.
 
 ```bash
 git clone https://github.com/<your-username>/<your-repository>.git
 cd <your-repository>
 ```
 
-### 2. Configure the Project
+Replace the placeholders with the actual repository URL.
 
-Activate your ESP-IDF environment, then configure the project:
+### 2. Configure the ESP32 Target
+
+Activate the ESP-IDF environment, then run:
 
 ```bash
 idf.py set-target esp32
 idf.py menuconfig
 ```
 
-Configure Wi-Fi credentials, MQTT or ThingsBoard connection settings, device credentials, and other project-specific options supported by your firmware.
+Configure the network credentials, MQTT or ThingsBoard connection parameters, and application settings supported by the project.
 
-**Security:** Never commit Wi-Fi passwords, access tokens, private keys, or other secrets to a public repository. Use local configuration and provide example values in documentation.
-
-### 3. Build the Firmware
+### 3. Compile the Firmware
 
 ```bash
 idf.py build
@@ -134,54 +167,50 @@ idf.py build
 
 ### 4. Flash and Monitor
 
-Replace `PORT` with your ESP32 serial port.
-
 ```bash
 idf.py -p PORT flash monitor
 ```
 
-Example serial ports:
-
-- Linux: `/dev/ttyUSB0` or `/dev/ttyACM0`
-- Windows: `COM3`
+Replace `PORT` with the serial device assigned to your ESP32, such as `/dev/ttyUSB0` on Linux or `COM3` on Windows.
 
 Press `Ctrl+]` to exit the serial monitor.
 
-### 5. Configure ThingsBoard
+### 5. Integrate with ThingsBoard
 
-1. Create or select a device in ThingsBoard.
-2. Configure the device credentials required by your firmware.
-3. Create dashboard widgets for soil moisture, temperature, humidity, pressure, and pump status.
-4. Configure MQTT telemetry and RPC settings to match the firmware.
-5. Verify telemetry reception and test remote pump control.
+1. Provision a device and configure the credentials required by the firmware.
+2. Configure telemetry fields and dashboard widgets.
+3. Match the MQTT settings and message structure to the implementation.
+4. Configure RPC methods if remote pump control is supported.
+5. Validate sensor readings, irrigation decisions, actuator behavior, and telemetry delivery.
 
-The MQTT topics, JSON fields, and RPC method names must match your actual firmware implementation.
+**Configuration note:** MQTT topics, telemetry keys, RPC method names, GPIO assignments, and sensor settings must match the actual source code and hardware wiring.
 
 ## Project Demonstration
 
-Explore the project showcase on LinkedIn for demonstration content and project visuals.
+Explore the project showcase for visual documentation and a demonstration of the system.
 
-[**View Smart Irrigation System Demo on LinkedIn**](https://lnkd.in/p/g7FB93Z2)
+[**View Project Showcase on LinkedIn →**](https://lnkd.in/p/g7FB93Z2)
 
-## Project Scope
+## Engineering Focus
 
-This project demonstrates an embedded IoT workflow integrating:
+This project demonstrates practical experience in:
 
-- ESP32 firmware development using ESP-IDF
-- Sensor acquisition and threshold-based control
-- Relay-driven actuator management
+- Native ESP32 firmware development with ESP-IDF
+- Sensor interfacing and embedded data acquisition
+- Threshold-based automation and actuator control
 - Wi-Fi connectivity and MQTT communication
-- ThingsBoard telemetry visualization and remote device interaction
+- Embedded hardware–software integration
+- IoT telemetry visualization and remote device supervision
 
-## Future Improvements
+## Potential Enhancements
 
-- Implement soil-moisture calibration and configurable thresholds.
-- Add maximum pump run-time limits and cooldown intervals.
-- Introduce sensor-failure detection and safe fallback behavior.
-- Improve Wi-Fi reconnection and MQTT error handling.
-- Strengthen credential management and encrypted communication.
-- Evaluate irrigation performance using soil-moisture trends and measured water consumption.
+- Soil-moisture calibration and configurable control thresholds
+- Maximum pump run-time limits and cooldown logic
+- Sensor fault detection and safe-state handling
+- More resilient Wi-Fi reconnection and MQTT error recovery
+- Secure credential management and TLS-enabled communication
+- Water-consumption measurement and irrigation performance evaluation
 
 ## License
 
-Add a `LICENSE` file and specify the license here if you intend to distribute the project publicly.
+Specify the project's license by adding a `LICENSE` file to the repository.
